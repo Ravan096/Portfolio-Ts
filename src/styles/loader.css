@@ -1,0 +1,25 @@
+
+.progress {
+   width: 211.2px;
+   height: 38.7px;
+   border-radius: 35.2px;
+   color: #f08dee;
+   border: 3.5px solid;
+   position: relative;
+}
+
+.progress::before {
+   content: "";
+   position: absolute;
+   margin: 3.5px;
+   inset: 0 100% 0 0;
+   border-radius: inherit;
+   background: currentColor;
+   animation: progress-pf82op 2.4s infinite;
+}
+
+@keyframes progress-pf82op {
+   100% {
+      inset: 0;
+   }
+}
