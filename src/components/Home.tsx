@@ -99,11 +99,11 @@ const Home = () => {
 {/* portfolio section */}
 
 
-<Container maxW={"100%"} border={"1px solid red"} h={"160vh"} bg={"#0f0836"}>
+<Container maxW={"100%"}  h={"160vh"} bg={"#0f0836"}>
 
-<Container display={"flex"} maxW={["100%","70%"]} h={"100%"} border={"1px solid purple"} flexDirection={["column","row"]} flexWrap={["nowrap","wrap"]}>
+<Container display={"flex"} maxW={["100%","70%"]} h={"100%"}  flexDirection={["column","row"]} flexWrap={["nowrap","wrap"]}>
     <Box width={["100%","50%"]}>
-    <Heading fontSize={["3rem","6rem"]} color={"whiteAlpha.900"} border={"1px solid red"} h={"20%"}>
+    <Heading fontSize={["3rem","6rem"]} color={"whiteAlpha.900"}  h={"20%"}>
         Portfolio
     </Heading>
     <Box>

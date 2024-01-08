@@ -72,7 +72,7 @@ const Header = () => {
                     <LinkButton url='/' title='Home'/>
                     <LinkButton url='/about' title='About' />
                     <LinkButton url='/' title='Portfolio' />
-                    <LinkButton url='/about' title='Pages' />
+                    <LinkButton url='/pages' title='Pages' />
                     <LinkButton url='/blog' title='Blog' />
                     <LinkButton url='/contact' title='Contact' />
 
