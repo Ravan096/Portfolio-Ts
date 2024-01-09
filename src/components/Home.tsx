@@ -1,5 +1,5 @@
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { Box, Button, Container, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputRightElement, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputRightElement, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { BiSupport } from 'react-icons/bi';
 import { FaBehance, FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
@@ -19,31 +19,47 @@ import shape3 from '../assets/shape-3.png';
 import shape4 from '../assets/shape-4.png';
 import shape1 from '../assets/shape1.png';
 import shape2 from '../assets/shape2.png';
+import cv from "../assets/Transcript-lakshmangupta.pdf"
+import { IoMdDownload } from "react-icons/io";
 
 
 
 const Home = () => {
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
 
-    const [component, setComponent] = useState <JSX.Element>(<About/>);
-    const [compVal, setcompVal]= useState("");
-  function changeComponent (e:any){
-    setcompVal(e.target.id);
-    console.log(compVal);
+  const fileName = 'myCV.pdf';
+  const filePath = cv + fileName;
+  
+  const downloadFile = () => {
+      console.log(cv);
+    const a = document.createElement('a');
+    a.href = filePath;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
 
 
-    if (compVal == "about") {
-      setComponent(<About/>);
-    }else if(compVal == "skill") {
-      setComponent(<Skill/>);
-    }else if(compVal == "service"){
-        setComponent(<Service/>);
-    }else if(compVal == "award"){
-        setComponent(<Award/>);
-    }else{
-        setComponent(<SocilaMedia/>)
-    }
-  }
+    // const [component, setComponent] = useState <JSX.Element>(<About/>);
+    // const [compVal, setcompVal]= useState("");
+//   function changeComponent (e:any){
+//     setcompVal(e.target.id);
+//     console.log(compVal);
+
+
+//     if (compVal == "about") {
+//       setComponent(<About/>);
+//     }else if(compVal == "skill") {
+//       setComponent(<Skill/>);
+//     }else if(compVal == "service"){
+//         setComponent(<Service/>);
+//     }else if(compVal == "award"){
+//         setComponent(<Award/>);
+//     }else{
+//         setComponent(<SocilaMedia/>)
+//     }
+//   }
   return (
     <Stack bg={"#0f0836"}>
     <Container maxW={"100%"} bg={"#31307a"} h={"81vh"} display={"flex"} flexDirection={["column","row"]}>
@@ -65,6 +81,8 @@ const Home = () => {
                 <Link to={"#"}><Box p={"3"} border={"1px solid #206da8"} borderRadius={"lg"}><FaLinkedinIn style={{fontSize:"2.5rem",color:"blue"}}/></Box></Link>
                 <Link to={"#"}><Box p={"3"} border={"1px solid pink"} borderRadius={"lg"}><FaInstagram style={{fontSize:"2.5rem",color:"crimson"}}/></Box></Link>
             </Box>
+
+            <Button colorScheme="purple" color={"azure"} onClick={downloadFile} >Download CV <IoMdDownload/></Button>
         </Box>
         <Box display={["none","block"]}>
             <img src={hero}/>
@@ -74,22 +92,51 @@ const Home = () => {
 
 <Container maxW={"100%"}  h={["","90vh"]} bg={"#0f0836"}>
 
-    <Box  maxW={["100%","70%"]} margin={"auto"} h={["20vh","20%"]} display={"flex"} flexDirection={"column"} justifyContent={"space-between"}>
+    <Box  maxW={["100%","70%"]} margin={"auto"} h={["20vh","20%"]} display={"flex"} justifyContent={"center"} alignItems={"center"} >
 
-        <Heading size={["2xl","4xl"]} color={"whiteAlpha.900"} children="About me"/>
-
-        <Box color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={["flex-start","space-around"]} h={"40%"} flexWrap={"wrap"}>
-        <Text color={"crimson"} id='about' children={"About"} fontWeight={"bold"} onClick={changeComponent} cursor={"pointer"} w={["30%","19%"]} textAlign={"center"} _hover={{borderBottom:"2px solid white"}} />
-        <Text children={"Skill"} id='skill' cursor={"pointer"} fontWeight={"bold"} onClick={changeComponent} w={["30%","19%"]} textAlign={"center"} _hover={{borderBottom:"2px solid white"}}/>
-        <Text children={"Services"} id='service' cursor={"pointer"} fontWeight={"bold"} onClick={changeComponent} w={["30%","19%"]} textAlign={"center"} _hover={{borderBottom:"2px solid white"}}/>
-        <Text children={"Social Media"} id='socialmedia' cursor={"pointer"} fontWeight={"bold"} onClick={changeComponent} w={["30%","19%"]} textAlign={"center"} _hover={{borderBottom:"2px solid white"}}/>
-        <Text children={"Award"} id='award' cursor={"pointer"} fontWeight={"bold"} onClick={changeComponent} w={["30%","19%"]} textAlign={"center"} _hover={{borderBottom:"2px solid white"}}/>
+        <Heading size={["2xl","4xl"]} color={"whiteAlpha.900"} textAlign={"center"} alignItems={"center"} children="About me"/>
         </Box>
-    </Box>
 
-    <Container  maxW={["100%","70%"]} h={["","80%"]}>
-        {component}
-        </Container>
+        <Container maxW={["100%","70%"]} h={["","80%"]}>
+
+        
+
+        <Tabs position="relative" variant="unstyled"  w={"100%"} h={"100%"}>
+    <TabList color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexWrap={"wrap"} h={["","10%"]}>
+      <Tab fontWeight={"bold"}>About</Tab>
+      <Tab fontWeight={"bold"}>Skill</Tab>
+      <Tab fontWeight={"bold"}>Services</Tab>
+      <Tab fontWeight={"bold"}>Social Media</Tab>
+      <Tab fontWeight={"bold"}>Award</Tab>
+    </TabList>
+    <TabIndicator
+      mt="-1.5px"
+      height="2px"
+      bg="whiteAlpha.800"
+      borderRadius="1px"
+    />
+    <TabPanels color={"whiteAlpha.900"} h={["","60vh"]} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+      <TabPanel>
+      <About/>
+      </TabPanel>
+      <TabPanel>
+      <Skill/>
+      </TabPanel>
+      <TabPanel>
+      <Service/>
+      </TabPanel>
+      <TabPanel>
+      <SocilaMedia/>
+      </TabPanel>
+      <TabPanel>
+      <Award/>
+      </TabPanel>
+    </TabPanels>
+  </Tabs>
+
+  </Container>
+
+    
 
 </Container>
 
@@ -563,7 +610,8 @@ const SocilaMedia= ()=>{
 const Award =()=>{
     return(
         <Heading color={"whiteAlpha.800"}>
-            Award
+            In Progress.....
+            Comming soon!
         </Heading>
     )
 }
