@@ -13,10 +13,10 @@ const Footer = () => {
     </Box>
 
     <Box w={["100%","40%"]} fontWeight={"bold"} color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <Link to={'/about'}><Text children={"About"}/></Link>
-        <Link to={'/portfolio'}><Text children={"Portfolio"}/></Link>
-        <Link to={'/blog'}><Text children={"Blog"}/></Link>
-        <Link to={'/contact'}><Text children={"Contact"}/></Link>
+        <Link to={'/about'}><Text children={"About"} _hover={{color:"crimson",transition:"all 0.3s"}}/></Link>
+        <Link to={'/portfolio'}><Text children={"Portfolio"} _hover={{color:"crimson",transition:"all 0.3s"}}/></Link>
+        <Link to={'/blog'}><Text children={"Blog"} _hover={{color:"crimson",transition:"all 0.3s"}}/></Link>
+        <Link to={'/contact'}><Text children={"Contact"} _hover={{color:"crimson",transition:"all 0.3s"}}/></Link>
     </Box>
     <Box w={["100%","35%"]} display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
         <Box border={"1px solid #206da8"} p={"2vh"} borderRadius={"full"}>

@@ -10,7 +10,7 @@ const Contact= lazy(()=> import("./components/Contact"))
 const Footer= lazy(()=> import("./components/Footer"))
 const PageNotFound= lazy(()=> import("./components/PageNotFound"))
 const Pricing= lazy(()=> import("./components/Pricing"))
-const Test= lazy(()=> import("./components/Test"))
+const Projects= lazy(()=> import("./components/Projects"))
 
 
 
@@ -18,7 +18,7 @@ function App() {
   
 
   return (
-    <div style={{cursor:"none"}}>
+    <div>
     <Router>
       <Header/>
       <CustomCursor/>
@@ -30,7 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<PageNotFound/>}/>
         <Route path="/pricing" element={<Pricing/>}/>
-        <Route path="/test" element={<Test/>}/>
+        <Route path="/project" element={<Projects/>}/>
       </Routes>
       <Footer/>
       </Suspense>

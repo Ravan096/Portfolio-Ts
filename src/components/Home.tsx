@@ -371,7 +371,7 @@ const Home = () => {
             Helpful tips for become a successful designer
             </Text>
             <Link to={"#"}>
-            Read More....
+            <Text _hover={{color:"crimson",transition:"all 0.3s"}}>Read More....</Text>
             </Link>
         </Box>
         <Box color={"white"}  w={["100%","29%"]} h={"100%"} mt={[2,0]}>
@@ -383,7 +383,7 @@ const Home = () => {
             Helpful tips for become a successful designer
             </Text>
             <Link to={"#"}>
-            Read More....
+            <Text _hover={{color:"crimson",transition:"all 0.3s"}}>Read More....</Text>
             </Link>
         </Box>
         <Box color={"white"} w={["100%","29%"]} h={"100%"} mt={[2,0]}>
@@ -395,7 +395,7 @@ const Home = () => {
             Helpful tips for become a successful designer
             </Text>
             <Link to={"#"}>
-            Read More....
+            <Text _hover={{color:"crimson",transition:"all 0.3s"}}>Read More....</Text>
             </Link>
         </Box>
 
