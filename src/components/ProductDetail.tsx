@@ -20,11 +20,11 @@ import axios from 'axios';
 import Loader from './Loader';
 import toast from 'react-hot-toast';
 import {useParams}from 'react-router-dom'
-
+import { useDispatch } from 'react-redux';
+import { addtocart } from '../reducer/cartReducer';
 const ProductDetail=()=> {
-  const [prod, setProd]= useState([]);
+  const [prod, setProd]= useState<any>([]);
   const [loading, setloading]= useState(false);
-  const [error, seterror]= useState(false);
   const params= useParams()
   console.log(params.id)
 
@@ -39,7 +39,6 @@ const ProductDetail=()=> {
       setloading(false);
       console.log(prod);
     }catch(error){
-      seterror(true);
       setloading(false);
     } 
   };
@@ -50,7 +49,10 @@ const ProductDetail=()=> {
     // }
   }, []);
 
-  const AddtoCart= ()=>{
+
+  const dispatch= useDispatch();
+  const AddtoCart= (prod:any)=>{
+    dispatch(addtocart(prod))
     toast.success("Added Successfully")
   }
 
@@ -204,7 +206,7 @@ const ProductDetail=()=> {
             _hover={{
               transform: 'translateY(2px)',
               boxShadow: 'lg',
-            }} onClick={AddtoCart}>
+            }} onClick={()=> AddtoCart({qty:1})}>
             Add to cart
           </Button>
 

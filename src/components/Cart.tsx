@@ -1,6 +1,5 @@
 import {
   Box,
-  Center,
   Heading,
   Text,
   Stack,
@@ -23,7 +22,6 @@ import { addtocart } from "../reducer/cartReducer";
 const Cart = () => {
   const [prod, setProd]= useState([]);
   const [loading, setloading]= useState(false);
-  const [error, seterror]= useState(false)
   const [page, setPage] = useState(12);
 
   const dispatch= useDispatch();
@@ -39,7 +37,6 @@ const Cart = () => {
       setProd(data);
       setloading(false);
     }catch(error){
-      seterror(true);
       setloading(true);
     } 
   };
@@ -86,7 +83,7 @@ const Cart = () => {
             {
               btns.map((item,index)=>{
                 return(
-                  <Button variant={"solid"} key={index+1} colorScheme={"purple"} onClick={()=>ChangePage((index+1)*12)}>
+                  <Button variant={"solid"} id={item} key={index+1} colorScheme={"purple"} onClick={()=>ChangePage((index+1)*12)}>
                     {index+1}
                   </Button>
                 )

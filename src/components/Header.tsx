@@ -35,7 +35,7 @@ const Header = () => {
     <Box w={"50%"} fontWeight={"bold"} color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
         <Link to={'/'}><Text color={"crimson"} children={"Home"}/></Link>
         <Link to={'/about'}><Text children={"About"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
-        <Link to={'/'}><Text children={"Portfolio"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/cart'}><Text children={"Ecommerse"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
         <Link to={'/project'}><Text children={"Projects"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
         <Link to={'/blog'}><Text children={"Blog"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
         <Link to={'/contact'}><Text children={"Contact"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
@@ -73,7 +73,7 @@ const Header = () => {
                 <VStack alignItems={'flex-start'} spacing='4' onClick={onClose}>
                     <LinkButton url='/' title='Home'/>
                     <LinkButton url='/about' title='About' />
-                    <LinkButton url='/' title='Portfolio' />
+                    <LinkButton url='/cart' title='Ecommerse' />
                     <LinkButton url='/project' title='Projects' />
                     <LinkButton url='/blog' title='Blog' />
                     <LinkButton url='/contact' title='Contact' />
