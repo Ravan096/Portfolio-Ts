@@ -40,7 +40,6 @@ export const cartReducer = createSlice({
        }
       },
       removeCartItem: (state, action: PayloadAction<string>) => {
-        const index = state.cartitems.find((item) => item.id === action.payload);
          state.cartitems.filter((item) => item.id !== action.payload);
       },
       calculatePrice: (state) => {
