@@ -2,6 +2,7 @@ import { Container, Text,Heading, Box, Button , Drawer, DrawerBody, DrawerConten
 import {Link} from 'react-router-dom';
 // import {ColorModeSwitcher} from '../ColorModeSwitcher';
 import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill} from 'react-icons/ri';
+import { FaShoppingCart } from "react-icons/fa";
 
 
 
@@ -33,11 +34,12 @@ const Header = () => {
 
     <Box w={"50%"} fontWeight={"bold"} color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
         <Link to={'/'}><Text color={"crimson"} children={"Home"}/></Link>
-        <Link to={'/about'}><Text children={"About"}/></Link>
-        <Link to={'/'}><Text children={"Portfolio"}/></Link>
-        <Link to={'/page'}><Text children={"Pages"}/></Link>
-        <Link to={'/blog'}><Text children={"Blog"}/></Link>
-        <Link to={'/contact'}><Text children={"Contact"}/></Link>
+        <Link to={'/about'}><Text children={"About"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/'}><Text children={"Portfolio"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/project'}><Text children={"Projects"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/blog'}><Text children={"Blog"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/contact'}><Text children={"Contact"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/cartitem'}><Text _hover={{color:"crimson", transition:"all 0.3s"}}> <FaShoppingCart/></Text></Link>
     </Box>
     <Box w={"25%"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
     <Link to={"/contact"}>
@@ -72,9 +74,10 @@ const Header = () => {
                     <LinkButton url='/' title='Home'/>
                     <LinkButton url='/about' title='About' />
                     <LinkButton url='/' title='Portfolio' />
-                    <LinkButton url='/pages' title='Pages' />
+                    <LinkButton url='/project' title='Projects' />
                     <LinkButton url='/blog' title='Blog' />
                     <LinkButton url='/contact' title='Contact' />
+                    <LinkButton url={'/cartitem'} title={"Cart"} />
 
                     <HStack justifyContent={'space-evenly'}
                     position='absolute' bottom={'2rem'}

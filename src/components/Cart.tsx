@@ -20,7 +20,7 @@ import { CartItem } from '../types/types';
 import { addtocart } from "../reducer/cartReducer";
 
 
-const Home1 = () => {
+const Cart = () => {
   const [prod, setProd]= useState([]);
   const [loading, setloading]= useState(false);
   const [error, seterror]= useState(false)
@@ -29,19 +29,18 @@ const Home1 = () => {
   const dispatch= useDispatch();
 
 
-
   useEffect(() => {
 
     
     const  FetchCoins=async ()=>{
       try{
-      const{data}= await axios.get(`https://myfakeapi.com/api/cars`);
+      const{data}= await axios.get(`https://fakestoreapi.com/products/?limit=${page}`);
 
       setProd(data);
       setloading(false);
     }catch(error){
       seterror(true);
-      setloading(false);
+      setloading(true);
     } 
   };
 
@@ -54,7 +53,6 @@ const Home1 = () => {
     const AddtoCartHandler=(cartItem:CartItem)=>{
             dispatch(addtocart(cartItem));
             console.log(cartItem);
-              alert("hello")
       toast.success('Added to cart Successfully!')
     }
 
@@ -102,7 +100,7 @@ const Home1 = () => {
   )
 }
 
-export default Home1
+export default Cart
 
 
 const ProductCard =({image,price,name,desc,id, carthandler }:any)=>{
@@ -159,7 +157,9 @@ const ProductCard =({image,price,name,desc,id, carthandler }:any)=>{
            _hover={{
              transform: 'translateY(2px)',
              boxShadow: 'lg',
-           }} onClick={carthandler}>Add to Cart</Button>
+           }} 
+          //  onClick={carthandler} 
+           onClick={() => carthandler({ name, price, id, qty: 1, image })}>Add to Cart</Button>
         </Stack>
       </Box>
     )

@@ -15,9 +15,9 @@ const Contact = () => {
         <HomeBanner heading={"Contact"} home={"Home"} path={"Contact"}/>
 
 
-        <Container maxW={"100%"} h={["","90vh"]} bg={"whiteAlpha.900"}>
+        <Container maxW={["full","100%"]} h={["","90vh"]} bg={"whiteAlpha.900"}>
 
-    <Container maxW={["100%","70%"]} h={"100%"}>
+    <Container maxW={["full","70%"]} h={"100%"}>
     <Box display={"flex"} alignItems={"center"} justifyContent={"center"} h={"20vh"}>
         <Heading fontSize={["3xl","7xl"]} color={"blackAlpha.900"}>
             Let’s Talk

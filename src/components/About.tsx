@@ -21,7 +21,7 @@ const About = () => {
                     </Heading>
 
                     <Text color={"gray.800"} fontWeight={"medium"}>
-                    My name is John Smith. I am a web designer and developer.
+                    My name is Lakshman Gupta. I am a web designer and developer.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.

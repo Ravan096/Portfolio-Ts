@@ -82,7 +82,7 @@ const Home = () => {
                 <Link to={"#"}><Box p={"3"} border={"1px solid pink"} borderRadius={"lg"}><FaInstagram style={{fontSize:"2.5rem",color:"crimson"}}/></Box></Link>
             </Box>
 
-            <Button colorScheme="purple" color={"azure"} onClick={downloadFile} >Download CV <IoMdDownload/></Button>
+            <Button colorScheme="purple" color={"azure"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload/></Button>
         </Box>
         <Box display={["none","block"]}>
             <img src={hero}/>
