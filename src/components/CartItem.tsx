@@ -6,7 +6,8 @@ import { increment,decrement,removeCartItem ,calculatePrice} from "../reducer/ca
 import "../styles/animation.css"
 import { StoreType } from "../store";
 import toast from "react-hot-toast";
-import {useEffect} from "react"
+import {useEffect} from "react";
+import {Helmet} from "react-helmet";
 
 
 const CartItem = () => {
@@ -27,6 +28,11 @@ const CartItem = () => {
 
   return (
     <Stack h={["","90vh"]} w={"100%"}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Cart</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
     
     {
         cartitem.length > 0?(
