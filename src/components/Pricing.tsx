@@ -12,7 +12,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
-
+import {Helmet} from "react-helmet";
 interface Props {
   children: React.ReactNode
 }
@@ -35,6 +35,11 @@ function PriceWrapper(props: Props) {
 const Pricing = () => {
     return (
     <Box py={12}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Pricing</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
           Plans that fit your need

@@ -17,6 +17,7 @@ import Loader from './Loader';
 import { useDispatch } from 'react-redux';
 import { CartItem } from '../types/types';
 import { addtocart } from "../reducer/cartReducer";
+import {Helmet} from "react-helmet";
 
 
 const Cart = () => {
@@ -63,6 +64,11 @@ const Cart = () => {
   return (
 
     <Container maxW={"full"} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#252526"}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Products</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
     <Container maxW={["full","80%"]} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#252526"}>
       {
         loading?(

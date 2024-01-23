@@ -22,6 +22,7 @@ import toast from 'react-hot-toast';
 import {useParams}from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addtocart } from '../reducer/cartReducer';
+import {Helmet} from "react-helmet";
 const ProductDetail=()=> {
   const [prod, setProd]= useState<any>([]);
   const [loading, setloading]= useState(false);
@@ -58,6 +59,11 @@ const ProductDetail=()=> {
 
   return (
     <Container maxW={'7xl'}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Item Details</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
       {
         loading?(
           <Loader/>

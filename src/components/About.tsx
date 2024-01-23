@@ -1,11 +1,17 @@
 import { Container, Heading, Box, Text, UnorderedList, ListItem, Button, CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
 import aboutimg from '../assets/about.c275b471.jpg';
 import { Service } from './Home';
+import {Helmet} from "react-helmet";
 
 
 const About = () => {
   return (
     <Container maxW={["100vw","100%"]}   w={["100vw",""]}>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>About</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
         <HomeBanner heading={"About Us"} home={"Home"} path={"About"}/>
 
         <Container h={""} maxW={"100%"} bgColor={"#f2f2f2"} bg='gray.50'>
