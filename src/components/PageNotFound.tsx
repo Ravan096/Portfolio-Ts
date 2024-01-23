@@ -1,12 +1,18 @@
 import { Box, Button, Container,Heading,Image } from "@chakra-ui/react";
 import notfoundimg from '../assets/gfg.jpg';
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 
 const PageNotFound = () => {
 
   return (
     <Container bgColor={"#000000"} h={"100%"} maxW={"100%"} border={"1px solid #000000"}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>404 Not Found</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
         <Container maxH={"100%"} maxW={"100%"} display={"flex"} bgColor={"#000000"} alignItems={"center"} justifyContent={"center"} flexDirection={"column"} mt={10}>
         <Heading color={"whiteAlpha.900"} fontSize={"4xl"} mb={[5,2]}>
         The page you were looking for doesn't exist.

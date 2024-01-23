@@ -39,6 +39,7 @@ const Header = () => {
         <Link to={'/project'}><Text children={"Projects"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
         <Link to={'/blog'}><Text children={"Blog"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
         <Link to={'/contact'}><Text children={"Contact"} _hover={{color:"crimson", transition:"all 0.3s"}}/></Link>
+        <Link to={'/pricing'}><Text _hover={{color:"crimson", transition:"all 0.3s"}}> Pricing</Text></Link>
         <Link to={'/cartitem'}><Text _hover={{color:"crimson", transition:"all 0.3s"}}> <FaShoppingCart/></Text></Link>
     </Box>
     <Box w={"25%"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
@@ -78,6 +79,7 @@ const Header = () => {
                     <LinkButton url='/blog' title='Blog' />
                     <LinkButton url='/contact' title='Contact' />
                     <LinkButton url={'/cartitem'} title={"Cart"} />
+                    <LinkButton url={'/pricing'} title={"Pricing"} />
 
                     <HStack justifyContent={'space-evenly'}
                     position='absolute' bottom={'2rem'}

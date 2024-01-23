@@ -6,7 +6,6 @@ import CustomCursor from "./components/Customcursor";
 import {Toaster} from "react-hot-toast";
 
 const Home= lazy(()=> import("./components/Home"))
-const Home1= lazy(()=> import("./components/Home1"))
 const About= lazy(()=> import("./components/About"))
 const Contact= lazy(()=> import("./components/Contact"))
 const Footer= lazy(()=> import("./components/Footer"))
@@ -48,7 +47,6 @@ function App() {
       <Suspense fallback={<Loader/>}>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/homeone" element={<Home1/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<PageNotFound/>}/>
@@ -57,7 +55,6 @@ function App() {
         <Route path="/cart" element={<Cart/>}/> 
         <Route path="/productdetails/:id" element={<ProductDetail/>}/> 
         <Route path="/cartitem" element={<CartItem/>}/> 
-        <Route path="/home1" element={<Home1/>}/> 
       </Routes>
       <Footer/>
       </Suspense>

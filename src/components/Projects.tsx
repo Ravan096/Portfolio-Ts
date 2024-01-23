@@ -7,10 +7,16 @@ import projectimg5 from "../assets/tapy-co-poster.jpg";
 import projectimg6 from "../assets/khora-urban-thinkers-poster-r.jpg";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const Projects = () => {
   return (
     <Box h={["","245vh"]} w={"100%"} bgColor={"#24262B"}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Projects</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
       <Container maxW={"100%"} h={"100%"}>
 
         <Box textAlign={"center"} boxSize={"border-box"} h={["","10%"]} w={["100%","80%"]} margin={"auto"}>

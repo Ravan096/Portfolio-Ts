@@ -3,6 +3,7 @@ import {BiSupport} from 'react-icons/bi';
 import { useState } from 'react';
 import {MdOutlineEmail} from 'react-icons/md';
 import {FaEarthAsia} from 'react-icons/fa6';
+import {Helmet} from "react-helmet";
 
 
 import { HomeBanner } from './About';
@@ -12,6 +13,11 @@ const Contact = () => {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <Container maxW={"100%"} border={"1px solid black"} h={""}>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
         <HomeBanner heading={"Contact"} home={"Home"} path={"Contact"}/>
 
 

@@ -21,6 +21,9 @@ import shape1 from '../assets/shape1.png';
 import shape2 from '../assets/shape2.png';
 import cv from "../assets/Transcript-lakshmangupta.pdf"
 import { IoMdDownload } from "react-icons/io";
+import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
+import {Helmet} from "react-helmet";
 
 
 
@@ -60,10 +63,38 @@ const Home = () => {
 //         setComponent(<SocilaMedia/>)
 //     }
 //   }
+const animations = {
+    h1: {
+      initial: {
+        x: "-100%",
+        opacity: 0,
+      },
+      whileInView: {
+        x: 0,
+        opacity: 1,
+      },
+    },
+    button: {
+      initial: {
+        y: "-100%",
+        opacity: 0,
+      },
+      whileInView: {
+        y: 0,
+        opacity: 1,
+      },
+    },
+  };
+
   return (
     <Stack bg={"#0f0836"}>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home</title>
+                <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
+            </Helmet>
     <Container maxW={"100%"} bg={"#31307a"} h={"81vh"} display={"flex"} flexDirection={["column","row"]}>
-        <Box  position={"relative"} width={["100%","50%"]} height={["50%","35%"]}
+        <Box  position={"relative"} width={["100%","50%"]} height={["50%","45%"]}
          display={"flex"}
          flexDirection={"column"}
          alignItems={"flex-start"}
@@ -73,9 +104,26 @@ const Home = () => {
          >
 
             <Heading as='h1' size={["2xl","4xl"]} display={"flex"} color={"whiteAlpha.900"} >
-                I'am Lakshman Gupta
+            <motion.h1 {...animations.h1}>
+            Hi, I Am <br /> Lakshman Gupta
+          </motion.h1>
+
             </Heading>
-            <Text color={"white"} fontSize={["2xl","3xl"]} children="Full Stack Developer | Frontend Developer"/>
+            {/* <Heading as='h1' size={["2xl","4xl"]} display={"flex"} color={"whiteAlpha.900"} >
+                I'am Lakshman Gupta
+            </Heading> */}
+
+            {/* <Text color={"white"} fontSize={["2xl","3xl"]} children="Full Stack Developer | Frontend Developer"/> */}
+            <Text color={"white"} fontSize={["2xl","3xl"]}>
+                <Typewriter
+              options={{
+              strings: ["Frontend Developer", "A Designer", "Full Stack Developer"],
+              autoStart: true,
+              loop: true,
+              cursor: "|",
+            }}
+          />
+          </Text>
             <Box display={"flex"} width={["80%","30%"]} justifyContent={"space-between"} >
                 <Link to={"#"}><Box p={"3"} border={"1px solid crimson"} borderRadius={"lg"}><FaFacebookF style={{fontSize:"2.5rem",color:"#4278ff"}}/></Box></Link>
                 <Link to={"#"}><Box p={"3"} border={"1px solid #206da8"} borderRadius={"lg"}><FaLinkedinIn style={{fontSize:"2.5rem",color:"blue"}}/></Box></Link>
