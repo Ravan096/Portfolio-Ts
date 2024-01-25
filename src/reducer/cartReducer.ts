@@ -43,12 +43,13 @@ export const cartReducer = createSlice({
          state.cartitems.filter((item) => item.id !== action.payload);
       },
       calculatePrice: (state) => {
-        let sum = 0;
+        let sum:number = 0;
         state.cartitems.forEach((i) => (sum += i.price * i.qty));
         state.subtotal = sum;
         state.shippingCharges = state.subtotal > 1000 ? 0 : 200;
         state.tax = +(state.subtotal * 0.18).toFixed();
         state.total = state.subtotal + state.tax + state.shippingCharges;
+        console.log(state.total)
       },
   },
 })

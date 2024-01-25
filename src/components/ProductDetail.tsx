@@ -23,6 +23,7 @@ import {useParams}from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addtocart } from '../reducer/cartReducer';
 import {Helmet} from "react-helmet";
+import { CartItem } from '../types/types';
 const ProductDetail=()=> {
   const [prod, setProd]= useState<any>([]);
   const [loading, setloading]= useState(false);
@@ -52,7 +53,7 @@ const ProductDetail=()=> {
 
 
   const dispatch= useDispatch();
-  const AddtoCart= (prod:any)=>{
+  const AddtoCart= (prod:CartItem)=>{
     dispatch(addtocart(prod))
     toast.success("Added Successfully")
   }
@@ -212,7 +213,7 @@ const ProductDetail=()=> {
             _hover={{
               transform: 'translateY(2px)',
               boxShadow: 'lg',
-            }} onClick={()=> AddtoCart({qty:1})}>
+            }} onClick={() => AddtoCart({qty: 1, name: prod.title, image: prod.image, price: prod.price, id:prod.id})}>
             Add to cart
           </Button>
 
