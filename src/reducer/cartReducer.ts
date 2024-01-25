@@ -44,12 +44,19 @@ export const cartReducer = createSlice({
       },
       calculatePrice: (state) => {
         let sum:number = 0;
-        state.cartitems.forEach((i) => (sum += i.price * i.qty));
-        state.subtotal = sum;
-        state.shippingCharges = state.subtotal > 1000 ? 0 : 200;
-        state.tax = +(state.subtotal * 0.18).toFixed();
-        state.total = state.subtotal + state.tax + state.shippingCharges;
-        console.log(state.total)
+  state.cartitems.forEach((i) => {
+    if (!isNaN(i.price) && !isNaN(i.qty)) {
+      sum += Number(i.price) * Number(i.qty);
+    }
+  });
+  state.subtotal = sum;
+  if (state.subtotal > 1000) {
+    state.shippingCharges = 0;
+  } else {
+    state.shippingCharges = 200;
+  }
+  state.tax = Math.round(state.subtotal * 0.18);
+  state.total = state.subtotal + state.tax + state.shippingCharges;
       },
   },
 })
