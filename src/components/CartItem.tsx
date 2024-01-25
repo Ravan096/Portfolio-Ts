@@ -24,6 +24,11 @@ const CartItem = () => {
 
   useEffect(() => {
     dispatch(calculatePrice());
+    console.log(cartitem)
+    console.log(total)
+    console.log(subtotal)
+    console.log(tax)
+    console.log(shippingCharges)
   }, [cartitem]);
 
   return (
@@ -47,7 +52,7 @@ const CartItem = () => {
 
               <CartView image={i.image} name={i.name} key={idx} price={i.price}
                decrementhandler={()=>dispatch(decrement(i.id))} incrementhandler={()=>dispatch(increment(i.id))}
-               deletehandler={removeProduct} qty={i.qty}/>
+               deletehandler={""} qty={i.qty}/>
             ))
           }
 

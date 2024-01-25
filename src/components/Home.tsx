@@ -133,7 +133,7 @@ const animations = {
             <Button colorScheme="purple" color={"azure"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload/></Button>
         </Box>
         <Box display={["none","block"]}>
-            <img src={hero}/>
+            <img src={hero} />
         </Box>
     </Container>
 
