@@ -118,6 +118,7 @@ const CartView =({image,name,price,qty,id,deletehandler,incrementhandler,decreme
             fontWeight={800}
             fontSize={'sm'}
             letterSpacing={1.1}>
+              ₹
             {price}
           </Text>
           <Heading
