@@ -78,7 +78,7 @@ const Cart = () => {
     prod.map((i:any)=>{
       return(
              <ProductCard image={i.image} id={i.id} key={i.id}
-                          price={`₹${i.price}`} name={i.title}
+                          price={`${i.price}`} name={i.title}
                           desc={i.description} carthandler={AddtoCartHandler}/>
              )
             })
@@ -133,6 +133,7 @@ const ProductCard =({image,price,name,desc,id, carthandler }:any)=>{
             fontWeight={800}
             fontSize={'sm'}
             letterSpacing={1.1}>
+              ₹
             {price}
           </Text>
           <Heading
