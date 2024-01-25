@@ -52,7 +52,7 @@ const CartItem = () => {
 
               <CartView image={i.image} name={i.name} key={idx} price={i.price}
                decrementhandler={()=>dispatch(decrement(i.id))} incrementhandler={()=>dispatch(increment(i.id))}
-               deletehandler={""} qty={i.qty}/>
+               deletehandler={removeProduct} qty={i.qty}/>
             ))
           }
 
@@ -102,7 +102,7 @@ export default CartItem
 
 
 
-const CartView =({image,name,price,qty,deletehandler,incrementhandler,decrementhandler}: any)=>{
+const CartView =({image,name,price,qty,id,deletehandler,incrementhandler,decrementhandler}: any)=>{
     return(
         <Stack direction={"row"} border={"2px solid greenyellow"} h={["30%","310px"]} rounded={"3xl"} bgColor={"white"}
                display={"flex"} alignItems={"center"} justifyContent={["space-between","space-around"]}>
@@ -132,7 +132,7 @@ const CartView =({image,name,price,qty,deletehandler,incrementhandler,decrementh
         <HStack display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
                 <Button onClick={decrementhandler} bgColor={"black"} color={"white"}>-</Button>
                 <Text>{qty}</Text>
-                <Button onClick={incrementhandler} bgColor={"black"} color={"white"}>+</Button>
+                <Button onClick={()=>incrementhandler(id)} bgColor={"black"} color={"white"}>+</Button>
             
                 <Button onClick={deletehandler} bgColor={"black"}> <AiFillDelete style={{color:"white",fontSize:"1.4rem"}}/></Button>
             
