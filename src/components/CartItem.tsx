@@ -18,17 +18,13 @@ const CartItem = () => {
 
   const removeProduct=(id:string)=>{
     dispatch(removeCartItem(id))
+    console.log(id)
     toast.success("Product Removed From Cart")
   }
   
 
   useEffect(() => {
     dispatch(calculatePrice());
-    console.log(cartitem)
-    console.log(total)
-    console.log(subtotal)
-    console.log(tax)
-    console.log(shippingCharges)
   }, [cartitem]);
 
   return (
@@ -50,7 +46,7 @@ const CartItem = () => {
           {
             cartitem.map((i,idx)=>(
 
-              <CartView image={i.image} name={i.name} key={idx} price={i.price}
+              <CartView image={i.image} name={i.name} key={idx} price={i.price} id={i.id}
                decrementhandler={()=>dispatch(decrement(i.id))} incrementhandler={()=>dispatch(increment(i.id))}
                deletehandler={removeProduct} qty={i.qty}/>
             ))
