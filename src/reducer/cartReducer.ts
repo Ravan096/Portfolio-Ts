@@ -40,12 +40,11 @@ export const cartReducer = createSlice({
        }
       },
       removeCartItem: (state, action: PayloadAction<string>) => {
-         state.cartitems.filter((item) => item.id !== action.payload);
+        state.cartitems=state.cartitems.filter((item) => item.id !== action.payload);
       },
       calculatePrice: (state) => {
         let sum:number = 0;
   state.cartitems.forEach((i) => {
-    console.log(i.price);
     if (!isNaN(i.price) && !isNaN(i.qty)) {
       sum += Number(i.price) * Number(i.qty);
     }
