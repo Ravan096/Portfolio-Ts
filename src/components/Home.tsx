@@ -1,5 +1,5 @@
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { Box, Button, Container, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputRightElement, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
+import { AddIcon, MinusIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Container, Flex, FormControl, FormLabel, HStack, Heading, Input, InputGroup, InputRightElement, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Tag, TagCloseButton, TagLabel, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { BiSupport } from 'react-icons/bi';
 import { FaBehance, FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
@@ -24,6 +24,8 @@ import { IoMdDownload } from "react-icons/io";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import {Helmet} from "react-helmet";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 
 
@@ -130,12 +132,170 @@ const animations = {
                 <Link to={"#"}><Box p={"3"} border={"1px solid pink"} borderRadius={"lg"}><FaInstagram style={{fontSize:"2.5rem",color:"crimson"}}/></Box></Link>
             </Box>
 
-            <Button colorScheme="purple" color={"azure"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload/></Button>
+            <Button colorScheme="purple" color={"azure"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload/> </Button>
         </Box>
         <Box display={["none","block"]}>
             <img src={hero} />
         </Box>
     </Container>
+
+
+
+
+    <Container maxW={"100%"} bg={"#0f0836"} h={"60vh"}>
+
+        <Box w={["","50%"]} m={"auto"} h={"100%"}>
+
+        <Box  maxW={["100%","70%"]} margin={"auto"} h={["20vh","30%"]} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+<Heading size={["2xl","3xl"]} color={"whiteAlpha.900"} textAlign={"center"} alignItems={"center"} children="Professional Experience"/>
+</Box>
+
+
+    <Accordion defaultIndex={[0]} allowToggle>
+  <AccordionItem mt={3}>
+    <h2 >
+      <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}>
+        <Box as="span" flex='1' textAlign='left' color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+        <Text fontWeight={"medium"} fontSize={"lg"}>Software Engineer @ Defacto Infotech pvt ltd</Text> 
+        <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2022 - Present</Text> 
+        </Box>
+        <AccordionIcon color={"whiteAlpha.900"}/>
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
+        <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
+            <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
+            <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
+        </Box>
+      <Text mt={2} color={"whiteAlpha.900"}>
+      Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Micorsoft Dynamic 365.
+      </Text>
+      <HStack spacing={4} mt={2}>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Vue Js</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Javascript</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Redux</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React Native</TagLabel>
+    </Tag>
+</HStack>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem mt={3}>
+    {({ isExpanded }) => (
+      <>
+        <h2>
+          <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}>
+            <Box as="span" flex='1' textAlign='left'  color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+            <Text fontWeight={"medium"} fontSize={"lg"}>Web Developer @ Freelancer</Text> 
+            <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2021-2022</Text> 
+             
+
+
+            </Box>
+            {isExpanded ? (
+              <MinusIcon fontSize='12px' color={"whiteAlpha.900"}/>
+            ) : (
+              <AddIcon fontSize='12px' color={"whiteAlpha.900"}/>
+            )}
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
+        <Box  display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
+            <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
+            <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
+        </Box>
+      <Text mt={2} color={"whiteAlpha.900"}>
+      Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.
+      </Text>
+      <HStack spacing={4} mt={2}>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Vue Js</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Javascript</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Redux</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React Native</TagLabel>
+    </Tag>
+</HStack>
+        </AccordionPanel>
+      </>
+    )}
+  </AccordionItem>
+
+  <AccordionItem mt={3}>
+    {({ isExpanded }) => (
+      <>
+        <h2>
+          <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}> 
+            <Box as="span" flex='1' textAlign='left'  color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+            <Text fontWeight={"medium"} fontSize={"lg"}>Top Rated Web Developer @ Upwork Inc.</Text> 
+            <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2017 - Present</Text> 
+             
+
+            </Box>
+            {isExpanded ? (
+              <MinusIcon fontSize='12px' color={"whiteAlpha.900"}/>
+            ) : (
+              <AddIcon fontSize='12px' color={"whiteAlpha.900"}/>
+            )}
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
+        <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
+            <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
+            <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
+        </Box>
+      <Text mt={2} color={"whiteAlpha.900"}>
+      Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.
+      </Text>
+      <HStack spacing={4} mt={2}>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Vue Js</TagLabel>
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React</TagLabel>
+      
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Javascript</TagLabel>
+      
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>Redux</TagLabel>
+     
+    </Tag>
+    <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
+      <TagLabel>React Native</TagLabel>
+    </Tag>
+</HStack>
+        </AccordionPanel>
+      </>
+    )}
+  </AccordionItem>
+</Accordion>
+
+        </Box>
+    </Container>
+
+
+
 
 
 <Container maxW={"100%"}  h={["","90vh"]} bg={"#0f0836"}>
