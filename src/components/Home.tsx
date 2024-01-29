@@ -1,5 +1,5 @@
 import { AddIcon, MinusIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Container, Flex, FormControl, FormLabel, HStack, Heading, Input, InputGroup, InputRightElement, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Tag, TagCloseButton, TagLabel, Text } from '@chakra-ui/react';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Container, Flex, FormControl, FormLabel, HStack, Heading, Input, InputGroup, InputRightElement, Stack, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Tag, TagLabel, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { BiSupport } from 'react-icons/bi';
 import { FaBehance, FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
