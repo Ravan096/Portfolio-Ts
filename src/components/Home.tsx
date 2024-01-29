@@ -142,7 +142,7 @@ const animations = {
 
 
 
-    <Container maxW={"100%"} bg={"#0f0836"} h={"60vh"}>
+    <Container maxW={"100%"} bg={"#0f0836"} h={["","60vh"]}>
 
         <Box w={["","50%"]} m={"auto"} h={"100%"}>
 
