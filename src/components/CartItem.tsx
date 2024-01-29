@@ -18,8 +18,13 @@ const CartItem = () => {
 
   const removeProduct=(id:string)=>{
     dispatch(removeCartItem(id))
-    console.log(id)
     toast.success("Product Removed From Cart")
+  }
+  const incrementItem=(id:string)=>{
+    dispatch(increment(id))   
+  }
+  const decrementItem=(id:string)=>{
+    dispatch(decrement(id))
   }
   
 
@@ -45,9 +50,8 @@ const CartItem = () => {
           }}>
           {
             cartitem.map((i,idx)=>(
-
               <CartView image={i.image} name={i.name} key={idx} price={i.price} id={i.id}
-               decrementhandler={()=>dispatch(decrement(i.id))} incrementhandler={()=>dispatch(increment(i.id))}
+               decrementhandler={decrementItem} incrementhandler={incrementItem}
                deletehandler={removeProduct} qty={i.qty}/>
             ))
           }
@@ -127,11 +131,11 @@ const CartView =({image,name,price,qty,id,deletehandler,incrementhandler,decreme
 
         <Stack w={["100%","30%"]}>
         <HStack display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
-                <Button onClick={decrementhandler} bgColor={"black"} color={"white"}>-</Button>
+                <Button onClick={()=>decrementhandler(id)} bgColor={"black"} color={"white"}>-</Button>
                 <Text>{qty}</Text>
                 <Button onClick={()=>incrementhandler(id)} bgColor={"black"} color={"white"}>+</Button>
             
-                <Button onClick={deletehandler} bgColor={"black"}> <AiFillDelete style={{color:"white",fontSize:"1.4rem"}}/></Button>
+                <Button onClick={()=>deletehandler(id)} bgColor={"black"}> <AiFillDelete style={{color:"white",fontSize:"1.4rem"}}/></Button>
             
             </HStack>
         

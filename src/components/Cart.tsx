@@ -50,7 +50,6 @@ const Cart = () => {
 
     const AddtoCartHandler=(cartItem:CartItem)=>{
             dispatch(addtocart(cartItem));
-            console.log(cartItem);
       toast.success('Added to cart Successfully!')
     }
 
