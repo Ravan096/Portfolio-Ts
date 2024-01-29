@@ -33,7 +33,7 @@ const Header = () => {
     </Box>
 
     <Box w={"50%"} fontWeight={"bold"} color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <Link to={'/'}><Text color={"crimson"} children={"Home"} p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
+        <Link to={'/'}><Text color={"crimson"} children={"Home"} p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid white",borderRadius:"50px"}}/></Link>
         <Link to={'/about'}><Text children={"About"} p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
         <Link to={'/cart'}><Text children={"Ecommerse"}  p={2} _hover={{color:"crimson", transition:"all 0.3s" , borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
         <Link to={'/project'}><Text children={"Projects"}  p={2} _hover={{color:"crimson", transition:"all 0.3s" , borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>

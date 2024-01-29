@@ -33,6 +33,7 @@ const Cart = () => {
     
     const  FetchCoins=async ()=>{
       try{
+        setloading(true);
       const{data}= await axios.get(`https://fakestoreapi.com/products/?limit=${page}`);
 
       setProd(data);
