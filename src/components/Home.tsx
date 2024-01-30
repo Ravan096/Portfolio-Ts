@@ -116,7 +116,7 @@ const animations = {
             </Heading> */}
 
             {/* <Text color={"white"} fontSize={["2xl","3xl"]} children="Full Stack Developer | Frontend Developer"/> */}
-            <Text color={"white"} fontSize={["2xl","3xl"]}>
+            <Text color={"#ea972f"} fontSize={["2xl","3xl"]}>
                 <Typewriter
               options={{
               strings: ["Frontend Developer", "A Designer", "Full Stack Developer"],
@@ -165,7 +165,7 @@ const animations = {
     <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
         <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
             <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
-            <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
+            <Link to={"https://lakshmanportfolio2023.netlify.app/"} target='_blank'><Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text></Link>
         </Box>
       <Text mt={2} color={"whiteAlpha.900"}>
       Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Micorsoft Dynamic 365.
