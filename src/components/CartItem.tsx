@@ -65,10 +65,27 @@ const CartItem = () => {
 
                 <Box display={"flex"} flexDirection={"column"} alignItems={"flex-start"} justifyContent={"space-around"}
                 h={"40%"} w={"100%"}>
-            <Heading fontWeight={"light"}>Subtotal: ${subtotal}</Heading>
-            <Heading fontWeight={"light"}>Shipping: ${shippingCharges}</Heading>
-            <Heading fontWeight={"light"}>Tax: ${tax}</Heading>
-            <Heading fontWeight={"light"}>Total: ${total}</Heading>
+            <Heading ml={[3,0]} fontSize={["xl","4xl"]} fontWeight={"light"}>Subtotal: ${subtotal}</Heading>
+            <Heading ml={[3,0]} fontSize={["xl","4xl"]} fontWeight={"light"}>Shipping: ${shippingCharges}</Heading>
+            <Heading ml={[3,0]} fontSize={["xl","4xl"]} fontWeight={"light"}>Tax: ${tax}</Heading>
+            <Heading ml={[3,0]} fontSize={["xl","4xl"]} fontWeight={"light"}>Total: ${total}</Heading>
+            </Box>
+
+            <Box  w={"100%"} h={"10%"} display={"flex"} alignItems={"center"}>
+              <Link to={'/payment'}>
+              <Button rounded={['2xl','none']}  ml={[3,0]}
+            size={'lg'}
+            py={'7'}
+            bgColor={'orange'}
+            color={useColorModeValue('white', 'gray.900')}
+            textTransform={'uppercase'}
+            _hover={{
+              transform: 'translateY(2px)',
+              boxShadow: 'lg',
+            }} >
+                Proceed to Payment
+              </Button>
+              </Link>
             </Box>
         </Stack>
     </Stack>
