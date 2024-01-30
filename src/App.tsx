@@ -14,7 +14,8 @@ const Pricing= lazy(()=> import("./components/Pricing"))
 const Projects= lazy(()=> import("./components/Projects"))
 const Cart= lazy(()=> import ("./components/Cart"))
 const ProductDetail= lazy(()=> import ("./components/ProductDetail"))
-const CartItem= lazy(()=> import ("./components/CartItem"))
+const CartItem= lazy(()=> import ("./components/CartItem"));
+const PaymentSystem= lazy(()=> import ("./components/PaymentSystem"));
 
 
 
@@ -55,6 +56,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/> 
         <Route path="/productdetails/:id" element={<ProductDetail/>}/> 
         <Route path="/cartitem" element={<CartItem/>}/> 
+        <Route path="/test" element={<PaymentSystem/>}/> 
       </Routes>
       <Footer/>
       </Suspense>

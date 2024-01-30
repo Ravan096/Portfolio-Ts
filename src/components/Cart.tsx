@@ -29,7 +29,6 @@ const Cart = () => {
 
 
   useEffect(() => {
-
     
     const  FetchCoins=async ()=>{
       try{
