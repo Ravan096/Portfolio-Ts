@@ -64,10 +64,10 @@ const Pricing = () => {
                 $
               </Text>
               <Text fontSize="5xl" fontWeight="900">
-                79
+                12
               </Text>
               <Text fontSize="3xl" color="gray.500">
-                /month
+                /hour
               </Text>
             </HStack>
           </Box>
@@ -125,10 +125,10 @@ const Pricing = () => {
                   $
                 </Text>
                 <Text fontSize="5xl" fontWeight="900">
-                  149
+                  29
                 </Text>
                 <Text fontSize="3xl" color="gray.500">
-                  /month
+                  /hour
                 </Text>
               </HStack>
             </Box>
@@ -176,7 +176,7 @@ const Pricing = () => {
                 $
               </Text>
               <Text fontSize="5xl" fontWeight="900">
-                349
+                1599
               </Text>
               <Text fontSize="3xl" color="gray.500">
                 /month

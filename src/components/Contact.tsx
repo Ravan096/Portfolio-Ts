@@ -1,18 +1,15 @@
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import {BiSupport} from 'react-icons/bi';
-import { useState } from 'react';
 import {MdOutlineEmail} from 'react-icons/md';
 import {FaEarthAsia} from 'react-icons/fa6';
 import {Helmet} from "react-helmet";
 
 
 import { HomeBanner } from './About';
-import { Container,Heading,Box, Text, Stack, Flex, FormControl,FormLabel,Input,Button,InputGroup, InputRightElement,  } from '@chakra-ui/react';
+import { Container,Heading,Box, Text, Stack, Flex, FormControl,FormLabel,Input,Button,InputGroup} from '@chakra-ui/react';
 
 const Contact = () => {
-  const [showPassword, setShowPassword] = useState(false)
   return (
-    <Container maxW={"100%"} border={"1px solid black"} h={""}>
+    <Container maxW={"full"} h={""}>
        <Helmet>
                 <meta charSet="utf-8" />
                 <title>Contact</title>
@@ -30,11 +27,10 @@ const Contact = () => {
         </Heading>
     </Box>
 
-    <Container maxW={"100%"} display={"flex"} flexDirection={["column","row"]}>
+    <Container maxW={"full"} display={"flex"} flexDirection={["column","row"]}>
 
-    <Flex
-    w={["100%","50%"]} border={"1px solid gray"}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+    <Flex w={["full","50%"]} border={"1px solid gray"}>
+      <Stack spacing={8} mx={['','auto']} maxW={'full'} py={12} px={6} >
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'} color={"blackAlpha.900"}>
             Get in Touch
@@ -43,11 +39,11 @@ const Contact = () => {
         <Box
           rounded={'lg'}
         //   bg={useColorModeValue('white', 'gray.700')}
-        bg={"whiteAlpha.900"}
+        // bg={"whiteAlpha.900"}
           boxShadow={'lg'}>
           <Stack spacing={4}>
             <Stack direction={["column","row"]}>
-              <Box>
+              <Box w={"100%"}>
                 <FormControl id="firstName" isRequired>
                   <FormLabel color={"blackAlpha.900"}>First Name</FormLabel>
                   <Input type="text" color={"blackAlpha.900"}/>
@@ -67,14 +63,7 @@ const Contact = () => {
             <FormControl id="subject" isRequired>
               <FormLabel color={"blackAlpha.900"}>Subject</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'}  color={"whiteAlpha.900"}/>
-                <InputRightElement h={'full'}>
-                  <Button color={"blackAlpha.900"}
-                    variant={'ghost'}
-                    onClick={() => setShowPassword((showPassword) => !showPassword)}>
-                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                  </Button>
-                </InputRightElement>
+                <Input type={'text'}  color={"blackAlpha.900"}/>
               </InputGroup>
             </FormControl>
 
