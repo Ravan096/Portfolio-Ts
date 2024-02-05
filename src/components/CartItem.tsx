@@ -61,7 +61,7 @@ const CartItem = () => {
 
 
         <Stack border={"2px solid black"} w={["","25%" ]} roundedLeft={"3xl"} bgColor={"#232424"} color={"whiteAlpha.700"} 
-               display={"flex"} alignItems={"center"} justifyContent={"center"}>
+               display={"flex"} alignItems={"center"} justifyContent={"center"} mb={[5,0]}>
 
                 <Box display={"flex"} flexDirection={"column"} alignItems={"flex-start"} justifyContent={"space-around"}
                 h={"40%"} w={"100%"}>
@@ -90,7 +90,7 @@ const CartItem = () => {
         </Stack>
     </Stack>
         ):(
-            <Stack direction={"row"} h={["60vh","90vh"]} bgColor={"#232424"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+            <Stack direction={"row"} h={["75vh","90vh"]} bgColor={"#232424"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
                 <Box w={["100%","50%"]} h={["100%","50%"]} display={"flex"} alignItems={"center"} justifyContent={"center"} flexDirection={"column"}>
                   <Box fontSize={"9xl"} className="image">
                     🛒
