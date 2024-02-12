@@ -20,7 +20,7 @@ const Projects = () => {
       <Container maxW={"100%"} h={"100%"}>
 
         <Box textAlign={"center"} boxSize={"border-box"} h={["","10%"]} w={["100%","80%"]} margin={"auto"}>
-          <Heading color={"whiteAlpha.800"} size={["2xl","4xl"]}>
+          <Heading color={"whiteAlpha.800"} size={["2xl","4xl"]} >
             My Work
           </Heading>
         </Box>
