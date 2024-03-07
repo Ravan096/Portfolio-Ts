@@ -40,7 +40,7 @@ const Contact = () => {
           rounded={'lg'}
         //   bg={useColorModeValue('white', 'gray.700')}
         // bg={"whiteAlpha.900"}
-          boxShadow={'lg'}>
+          >
           <Stack spacing={4}>
             <Stack direction={["column","row"]}>
               <Box w={"100%"}>
@@ -114,7 +114,7 @@ const Contact = () => {
             </Text>
             </Box>
         </Box>
-        <Box border={"1px solid gray"}  w={["100%","70%"]} h={"30%"} color={"balck"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
+        <Box border={"1px solid gray"} mb={[1,0]}  w={["100%","70%"]} h={"30%"} color={"balck"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
             <Heading fontSize={["2xl",""]}>
             +91 256-987-239
             </Heading>
