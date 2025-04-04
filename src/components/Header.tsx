@@ -69,7 +69,7 @@ const Header = () => {
     <Drawer placement='left' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay backdropFilter={'blur(2px)'}/>
         <DrawerContent bg={"#0f0836"}>
-            <DrawerHeader borderBottomWidth={'1px'} color={"whiteAlpha.900"}>Portfolio</DrawerHeader>
+            <DrawerHeader borderBottomWidth={'1px'} color={"whiteAlpha.900"}>Lakshman.</DrawerHeader>
             <DrawerBody>
                 <VStack alignItems={'flex-start'} spacing='4' onClick={onClose}>
                     <LinkButton url='/' title='Home'/>
