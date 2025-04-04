@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { BiSupport } from 'react-icons/bi';
-import { FaBehance, FaDribbble, FaExternalLinkSquareAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaExternalLinkSquareAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaEarthAsia } from 'react-icons/fa6';
 import { IoMdDownload } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
@@ -22,8 +22,6 @@ import Typewriter from "typewriter-effect";
 import news1 from '../assets/1.8db7cac3.jpg';
 import news2 from '../assets/2.35c9abda.jpg';
 import news3 from '../assets/3.43af2d95.jpg';
-import abouthero from '../assets/abouthero.png';
-import hero from '../assets/hero.png';
 import port1 from '../assets/img-1.bcaec8cb.jpg';
 import port2 from '../assets/img-2.c17aa951.jpg';
 import port3 from '../assets/img-3.4918c2e8.jpg';
@@ -677,88 +675,88 @@ export default Home
 
 
 
-const About = () => {
+// const About = () => {
 
-  return (
-    <Container display={"flex"} maxW={"100%"} h={"100%"} alignItems={"center"} flexDirection={["column", "row"]}>
-      <Box w={["95vw", "50%"]} h={["100%", "70%"]}>
-        <img src={abouthero} alt="" />
-      </Box>
-      <Box w={["95vw", "50%"]} h={["100%", "70%"]} color={"whiteAlpha.900"} display={"flex"} flexDirection={"column"} alignItems={"flex-start"} justifyContent={"space-around"}>
-        <Heading size={["2xl", "3xl"]}>
-          I created products not just art
-        </Heading>
+//   return (
+//     <Container display={"flex"} maxW={"100%"} h={"100%"} alignItems={"center"} flexDirection={["column", "row"]}>
+//       <Box w={["95vw", "50%"]} h={["100%", "70%"]}>
+//         <img src={abouthero} alt="" />
+//       </Box>
+//       <Box w={["95vw", "50%"]} h={["100%", "70%"]} color={"whiteAlpha.900"} display={"flex"} flexDirection={"column"} alignItems={"flex-start"} justifyContent={"space-around"}>
+//         <Heading size={["2xl", "3xl"]}>
+//           I created products not just art
+//         </Heading>
 
-        <Text>
-          My name is John Smith. I am a web designer and developer.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-        </Text>
-        <Button variant={"outline"} color={"whiteAlpha.800"} border={"1px solid crimson"} _hover={{ color: "black", bgColor: "red", border: "none" }}>
-          Lets Talk
-        </Button>
-      </Box>
-    </Container>
-  )
-}
+//         <Text>
+//           My name is John Smith. I am a web designer and developer.Lorem ipsum dolor sit amet,
+//           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+//           Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+//         </Text>
+//         <Button variant={"outline"} color={"whiteAlpha.800"} border={"1px solid crimson"} _hover={{ color: "black", bgColor: "red", border: "none" }}>
+//           Lets Talk
+//         </Button>
+//       </Box>
+//     </Container>
+//   )
+// }
 
 
-const Skill = () => {
-  return (
-    <Container display={"flex"} maxW={["100vw", "100%"]} h={"100%"} flexWrap={["wrap", "wrap"]}
-      alignContent={"center"} justifyContent={"center"} flexDirection={["row", "row"]}>
-      <Box borderBottom={"2px solid #f03737"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#f03737"}>
-          95%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Project Management
-        </Text>
-      </Box>
-      <Box borderBottom={"2px solid #0eb02e"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#0eb02e"}>
-          70%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Communication Skills
-        </Text>
-      </Box>
-      <Box borderBottom={"2px solid #c79f1c"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#c79f1c"}>
-          65%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Problem Solving
-        </Text>
-      </Box>
-      <Box borderBottom={"2px solid #e5e81e"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#e5e81e"}>
-          55%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Analitical Ability
-        </Text>
-      </Box>
-      <Box borderBottom={"2px solid #c20e4a"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#c20e4a"}>
-          43%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Organization
-        </Text>
-      </Box>
-      <Box borderBottom={"2px solid #25a9b3"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
-        <Heading fontSize={["3xl", "7rem"]} color={"#25a9b3"}>
-          82%
-        </Heading>
-        <Text fontSize={["2xl", "3xl"]}>
-          Creativity
-        </Text>
-      </Box>
+// const Skill = () => {
+//   return (
+//     <Container display={"flex"} maxW={["100vw", "100%"]} h={"100%"} flexWrap={["wrap", "wrap"]}
+//       alignContent={"center"} justifyContent={"center"} flexDirection={["row", "row"]}>
+//       <Box borderBottom={"2px solid #f03737"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#f03737"}>
+//           95%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Project Management
+//         </Text>
+//       </Box>
+//       <Box borderBottom={"2px solid #0eb02e"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#0eb02e"}>
+//           70%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Communication Skills
+//         </Text>
+//       </Box>
+//       <Box borderBottom={"2px solid #c79f1c"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#c79f1c"}>
+//           65%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Problem Solving
+//         </Text>
+//       </Box>
+//       <Box borderBottom={"2px solid #e5e81e"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#e5e81e"}>
+//           55%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Analitical Ability
+//         </Text>
+//       </Box>
+//       <Box borderBottom={"2px solid #c20e4a"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#c20e4a"}>
+//           43%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Organization
+//         </Text>
+//       </Box>
+//       <Box borderBottom={"2px solid #25a9b3"} h={["", "40%"]} w={["100%", "30%"]} color={"whiteAlpha.900"} m={2}>
+//         <Heading fontSize={["3xl", "7rem"]} color={"#25a9b3"}>
+//           82%
+//         </Heading>
+//         <Text fontSize={["2xl", "3xl"]}>
+//           Creativity
+//         </Text>
+//       </Box>
 
-    </Container>
-  )
-}
+//     </Container>
+//   )
+// }
 
 
 export const Service = () => {
@@ -826,72 +824,58 @@ export const Service = () => {
   )
 }
 
-const SocilaMedia = () => {
-  return (
-    <Container display={"flex"} flexDirection={["column", "row"]} maxW={"100%"} h={"100%"} flexWrap={["nowrap", "wrap"]} >
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaFacebookF style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#f03737"}>
-          Facebook
-        </Heading>
-      </Box>
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaInstagram style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#0eb02e"}>
-          Instagram
-        </Heading>
-      </Box>
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaTwitter style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#c79f1c"}>
-          Twitter
-        </Heading>
-      </Box>
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaDribbble style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#e5e81e"}>
-          Dribble
-        </Heading>
-      </Box>
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaLinkedinIn style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#e5e81e"}>
-          Linkedin
-        </Heading>
-      </Box>
-      <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <FaBehance style={{ fontSize: "5rem" }} />
-        <Heading fontSize={"2rem"} color={"#e5e81e"}>
-          Behance
-        </Heading>
-      </Box>
-    </Container>
-  )
-}
+// const SocilaMedia = () => {
+//   return (
+//     <Container display={"flex"} flexDirection={["column", "row"]} maxW={"100%"} h={"100%"} flexWrap={["nowrap", "wrap"]} >
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaFacebookF style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#f03737"}>
+//           Facebook
+//         </Heading>
+//       </Box>
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaInstagram style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#0eb02e"}>
+//           Instagram
+//         </Heading>
+//       </Box>
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaTwitter style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#c79f1c"}>
+//           Twitter
+//         </Heading>
+//       </Box>
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaDribbble style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#e5e81e"}>
+//           Dribble
+//         </Heading>
+//       </Box>
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaLinkedinIn style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#e5e81e"}>
+//           Linkedin
+//         </Heading>
+//       </Box>
+//       <Box h={"40%"} w={["100%", "30%"]} m={4} color={"whiteAlpha.900"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+//         <FaBehance style={{ fontSize: "5rem" }} />
+//         <Heading fontSize={"2rem"} color={"#e5e81e"}>
+//           Behance
+//         </Heading>
+//       </Box>
+//     </Container>
+//   )
+// }
 
 
-const Award = () => {
-  return (
-    <Heading color={"whiteAlpha.800"}>
-      In Progress.....
-      Comming soon!
-    </Heading>
-  )
-}
-
-
-
-
-
-
-const skills = [
-  { name: "Power BI", value: 95, color: "teal.400" },
-  { name: "Excel", value: 90, color: "red.400" },
-  { name: "Tableau", value: 85, color: "yellow.400" },
-  { name: "Communication", value: 95, color: "gray.700" },
-  { name: "SQL", value: 90, color: "red.500" },
-  { name: "Problem solving", value: 85, color: "blue.400" },
-];
+// const Award = () => {
+//   return (
+//     <Heading color={"whiteAlpha.800"}>
+//       In Progress.....
+//       Comming soon!
+//     </Heading>
+//   )
+// }
 
 const SkillBar = ({ name, value, color }: any) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
