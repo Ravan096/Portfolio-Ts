@@ -19,18 +19,6 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import Typewriter from "typewriter-effect";
-import news1 from '../assets/1.8db7cac3.jpg';
-import news2 from '../assets/2.35c9abda.jpg';
-import news3 from '../assets/3.43af2d95.jpg';
-import port1 from '../assets/img-1.bcaec8cb.jpg';
-import port2 from '../assets/img-2.c17aa951.jpg';
-import port3 from '../assets/img-3.4918c2e8.jpg';
-import port4 from '../assets/img-4.9ca17d0e.jpg';
-import shape3 from '../assets/shape-3.png';
-import shape4 from '../assets/shape-4.png';
-import shape1 from '../assets/shape1.png';
-import shape2 from '../assets/shape2.png';
-import cv from "../assets/Transcript-lakshmangupta.pdf";
 
 
 
@@ -44,7 +32,7 @@ const Home = () => {
     { name: "Javascript", value: 90, color: "red.500" },
     { name: "MongoDB", value: 85, color: "blue.400" },
   ];
-
+  const cv = "https://res.cloudinary.com/djcni3ioh/image/upload/v1738241564/Assets/DeveloperResume_vwo6tr.pdf";
   const fileName = 'myCV.pdf';
   const filePath = cv + fileName;
 
@@ -170,7 +158,7 @@ const Home = () => {
           <Accordion defaultIndex={[0]} allowToggle>
             <AccordionItem mt={3}>
               <h2 >
-                <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}>
+                <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
                   <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
                     <Text fontWeight={"medium"} fontSize={"lg"}>Software Engineer @ Defacto Infotech pvt ltd</Text>
                     <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2022 - Present</Text>
@@ -210,7 +198,7 @@ const Home = () => {
               {({ isExpanded }) => (
                 <>
                   <h2>
-                    <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}>
+                    <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
                       <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
                         <Text fontWeight={"medium"} fontSize={"lg"}>Web Developer @ Freelancer</Text>
                         <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2021-2022</Text>
@@ -259,7 +247,7 @@ const Home = () => {
               {({ isExpanded }) => (
                 <>
                   <h2>
-                    <AccordionButton bgColor={"#540E6D"} borderRadius={"xl"} p={3}>
+                    <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
                       <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
                         <Text fontWeight={"medium"} fontSize={"lg"}>Top Rated Web Developer @ Upwork Inc.</Text>
                         <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2017 - Present</Text>
@@ -415,7 +403,7 @@ const Home = () => {
               Portfolio
             </Heading>
             <Box>
-              <img src={port1} alt="" />
+              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-1.bcaec8cb_zti23i.jpg"} alt="" />
               {/* <Box  border={"1px solid crimson"} position={"relative"} w={"20vw"} p={"1rem"}
         left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
             <Heading size={"2xl"}>
@@ -431,7 +419,7 @@ const Home = () => {
 
             </Box>
             <Box>
-              <img src={port2} alt="" />
+              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-2.c17aa951_u5wmrc.jpg"} alt="" />
               {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
         left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
             <Heading size={"2xl"}>
@@ -450,7 +438,7 @@ const Home = () => {
 
           <Box width={["100%", "50%"]}>
             <Box>
-              <img src={port3} alt="" />
+              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-3.4918c2e8_vimmvw.jpg"} alt="" />
               {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
         left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
             <Heading size={"2xl"}>
@@ -465,7 +453,7 @@ const Home = () => {
         </Box> */}
             </Box>
             <Box>
-              <img src={port4} alt="" />
+              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007265/portfolio/img-4.9ca17d0e_kxwfn2.jpg"} alt="" />
               {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
         left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
             <Heading size={"2xl"}>
@@ -624,7 +612,7 @@ const Home = () => {
         <Container maxW={["100%", "70%"]} display={"flex"} justifyContent={"space-around"} flexDirection={["column", "row"]} >
 
           <Box color={"white"} w={["100%", "29%"]} h={"100%"}>
-            <img src={news1} alt="" />
+            <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007271/portfolio/1.8db7cac3_dcxvrh.jpg"} alt="" />
             <Text mt={[2, 0]}>
               By Admin. Nov 24, 2020
             </Text>
@@ -636,7 +624,7 @@ const Home = () => {
             </Link>
           </Box>
           <Box color={"white"} w={["100%", "29%"]} h={"100%"} mt={[2, 0]}>
-            <img src={news2} alt="" />
+            <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007271/portfolio/2.35c9abda_uahuyw.jpg"} alt="" />
             <Text mt={[2, 0]}>
               By Admin. Nov 24, 2020
             </Text>
@@ -648,7 +636,7 @@ const Home = () => {
             </Link>
           </Box>
           <Box color={"white"} w={["100%", "29%"]} h={"100%"} mt={[2, 0]}>
-            <img src={news3} alt="" />
+            <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007271/portfolio/3.43af2d95_gvkotj.jpg"} alt="" />
             <Text mt={[2, 0]}>
               By Admin. Nov 24, 2020
             </Text>
@@ -765,7 +753,7 @@ export const Service = () => {
       <Box h={["50vh", "50%"]} w={["100%", "50%"]} color={"whiteAlpha.900"} display={"flex"}
         alignItems={["flex-start", "center"]} flexDirection={["column", "row"]} mt={2}>
         <Box >
-          <img src={shape1} alt="" />
+          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007267/portfolio/shape1_memhdg.png"} alt="" />
         </Box>
         <Box>
           <Heading fontSize={["3rem", "3rem"]} color={"#f03737"}>
@@ -779,7 +767,7 @@ export const Service = () => {
       <Box h={["50vh", "50%"]} w={["100%", "50%"]} color={"whiteAlpha.900"} display={"flex"}
         alignItems={["flex-start", "center"]} flexDirection={["column", "row"]} mt={2}>
         <Box>
-          <img src={shape2} alt="" />
+          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007267/portfolio/shape2_pvczra.png"} alt="" />
         </Box>
         <Box>
           <Heading fontSize={"3rem"} color={"#0eb02e"}>
@@ -793,7 +781,7 @@ export const Service = () => {
       <Box h={["50vh", "50%"]} w={["100%", "50%"]} color={"whiteAlpha.900"} display={"flex"}
         alignItems={["flex-start", "center"]} flexDirection={["column", "row"]} mt={2}>
         <Box>
-          <img src={shape3} alt="" />
+          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007268/portfolio/shape-3_vspw0f.png"} alt="" />
 
         </Box>
         <Box>
@@ -808,7 +796,7 @@ export const Service = () => {
       <Box h={["50vh", "50%"]} w={["100%", "50%"]} color={"whiteAlpha.900"} display={"flex"}
         alignItems={["flex-start", "center"]} flexDirection={["column", "row"]} mt={2}>
         <Box>
-          <img src={shape4} alt="" />
+          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007268/portfolio/shape-4_jhn9v8.png"} alt="" />
 
         </Box>
         <Box>

@@ -1,5 +1,4 @@
 import { Box, Button, Container,Heading,Image } from "@chakra-ui/react";
-import notfoundimg from '../assets/gfg.jpg';
 import { Link } from "react-router-dom";
 import {Helmet} from "react-helmet";
 
@@ -18,7 +17,7 @@ const PageNotFound = () => {
         The page you were looking for doesn't exist.
         </Heading>
         <Box bgColor={"black"} >
-            <Image src={notfoundimg} objectFit={"cover"} maxW={"100%"} maxH={"100%"}/>
+            <Image src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007265/portfolio/gfg_wstxkh.jpg"} objectFit={"cover"} maxW={"100%"} maxH={"100%"}/>
             <div>
 
             </div>

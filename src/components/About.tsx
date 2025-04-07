@@ -1,5 +1,4 @@
 import { Container, Heading, Box, Text, UnorderedList, ListItem, Button, CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
-import aboutimg from '../assets/about.c275b471.jpg';
 import { Service } from './Home';
 import {Helmet} from "react-helmet";
 
@@ -18,7 +17,7 @@ const About = () => {
             <Container maxW={"100%"} h={["","90vh"]} display={'flex'} flexDirection={["column","row"]} alignItems={"center"} justifyContent={"center"}>
                 <Container h={["","90%"]}  display={"flex"} flexDirection={["column","row"]} maxW  ={["100%","70%"]} justifyContent={"space-around"} alignItems={"center"}>
                 <Box w={[350,"45%"]} display={"flex"} alignItems={"center"} justifyContent={"center"} h={"100%"} boxShadow='2xl'>
-                    <img src={aboutimg} alt="" />
+                    <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007272/portfolio/about.c275b471_x98gxe.jpg"} alt="" />
                 </Box>
 
                 <Box w={[350,"50%"]}  display={"flex"} justifyContent={"space-around"} flexDirection={"column"} h={"70%"}>

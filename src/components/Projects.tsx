@@ -1,13 +1,7 @@
 import { Box, Button, Container, Heading, Image, Text } from "@chakra-ui/react";
-import projectimg1 from "../assets/flighlocal-cover-image.jpg";
-import projectimg2 from "../assets/ailabgranada.com-poster.jpg";
-import projectimg3 from "../assets/tryotel-b2c-cover.jpg";
-import projectimg4 from "../assets/kananaskis-nordic-spa-poster.jpg";
-import projectimg5 from "../assets/tapy-co-poster.jpg";
-import projectimg6 from "../assets/khora-urban-thinkers-poster-r.jpg";
+import { Helmet } from "react-helmet";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import {Helmet} from "react-helmet";
 
 const Projects = () => {
   return (
@@ -28,18 +22,18 @@ const Projects = () => {
         <Box  h={"85%"} display={"flex"} flexDirection={["column", "row"]} justifyContent={"space-around"}
         w={["100%","80%"]} margin={"auto"} flexWrap={"wrap"}>
 
-          <ProjectCard img={projectimg1} title={"Web Development"} url={"/cart"} heading={"Ecommerse Sample"}/>
-          <ProjectCard img={projectimg2} title={"Web Development"} url={"https://cryptography-net.netlify.app/"} heading={"Real Time Crypto Currency"}/>
-          <ProjectCard img={projectimg3} title={"Web Development"} url={"/"} heading={"Portfolio"}/>
-          <ProjectCard img={projectimg4} title={"Web Development"} url={"https://demo-chat-app0.netlify.app"} heading={"Real Time Chat App"}/>
-          <ProjectCard img={projectimg5} title={"Web Development"} url={"https://carthandler.netlify.app"} heading={"Cart Handler"}/>
-          <ProjectCard img={projectimg6} title={"Web Development"} heading={"Walker IP Pty Ltd"}/>
-          <ProjectCard img={projectimg1} title={"Web Development"} heading={"Flight Local (B2B Travel Solution"}/>
-          <ProjectCard img={projectimg2} title={"Web Development"} heading={"Al Lab Granada"}/>
-          <ProjectCard img={projectimg3} title={"Web Development"} heading={"Tryotel Web (B2C)"}/>
-          <ProjectCard img={projectimg4} title={"Web Development"} heading={"Kanaskis Nodic Spa Web"}/>
-          <ProjectCard img={projectimg5} title={"Web Development"} heading={"A Higher Thought"}/>
-          <ProjectCard img={projectimg6} title={"Web Development"} heading={"Walker IP Pty Ltd"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/flighlocal-cover-image_bq0pas.jpg"} title={"Web Development"} url={"/cart"} heading={"Ecommerse Sample"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007273/portfolio/ailabgranada.com-poster_g4k0bn.jpg"} title={"Web Development"} url={"https://cryptography-net.netlify.app/"} heading={"Real Time Crypto Currency"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007271/portfolio/tryotel-b2c-cover_e2kqet.jpg"} title={"Web Development"} url={"/"} heading={"Portfolio"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007265/portfolio/kananaskis-nordic-spa-poster_hu0jy5.jpg"} title={"Web Development"} url={"https://demo-chat-app0.netlify.app"} heading={"Real Time Chat App"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007270/portfolio/tapy-co-poster_tulwu7.jpg"} title={"Web Development"} url={"https://carthandler.netlify.app"} heading={"Cart Handler"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007266/portfolio/khora-urban-thinkers-poster-r_pj8hri.jpg"} title={"Web Development"} heading={"Walker IP Pty Ltd"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/flighlocal-cover-image_bq0pas.jpg"} title={"Web Development"} heading={"Flight Local (B2B Travel Solution"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007273/portfolio/ailabgranada.com-poster_g4k0bn.jpg"} title={"Web Development"} heading={"Al Lab Granada"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007271/portfolio/tryotel-b2c-cover_e2kqet.jpg"} title={"Web Development"} heading={"Tryotel Web (B2C)"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007265/portfolio/kananaskis-nordic-spa-poster_hu0jy5.jpg"} title={"Web Development"} heading={"Kanaskis Nodic Spa Web"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007270/portfolio/tapy-co-poster_tulwu7.jpg"} title={"Web Development"} heading={"A Higher Thought"}/>
+          <ProjectCard img={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007266/portfolio/khora-urban-thinkers-poster-r_pj8hri.jpg"} title={"Web Development"} heading={"Walker IP Pty Ltd"}/>
         </Box>
 
 
