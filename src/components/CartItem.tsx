@@ -30,6 +30,7 @@ const CartItem = () => {
 
   useEffect(() => {
     dispatch(calculatePrice());
+    console.log(cartitem)
   }, [cartitem]);
 
   return (
