@@ -76,7 +76,7 @@ const ProductDetail = () => {
               columns={{ base: 1, lg: 2 }}
               spacing={{ base: 8, md: 10 }}
               py={{ base: 18, md: 24 }}>
-              <Box border={"2px solid red"}>
+              <Box>
                 <Image
                   rounded={'md'}
                   alt={'product image'}
@@ -86,9 +86,8 @@ const ProductDetail = () => {
                   align={'center'}
                   w={'100%'}
                   h={{ base: '100%', sm: '400px', lg: '500px' }}
-                  border={"2px solid green"}
                 />
-                <Flex>
+                <Flex rounded={"md"} bgColor={"gray.100"} justifyContent={"center"} alignItems={"center"} mt={5} flexWrap={"wrap"} gap={2}>
                   {
                     prod.image?.map((item: string, idx: number) => (
                       <Image
@@ -99,6 +98,7 @@ const ProductDetail = () => {
                         objectFit="cover"
                         borderRadius="md"
                         cursor="pointer"
+                        opacity={mainImage === item ? 1 : 0.6}
                         _hover={{ opacity: 1 }}
                         transition="opacity 0.3s"
                         onClick={() => setMainImage(item)}
@@ -108,7 +108,7 @@ const ProductDetail = () => {
                   }
                 </Flex>
               </Box>
-              <Stack spacing={{ base: 6, md: 10 }}>
+              <Stack spacing={{ base: 6, md: 10 }} mt={['16',0]}>
                 <Box as={'header'}>
                   <Heading
                     lineHeight={1.1}
