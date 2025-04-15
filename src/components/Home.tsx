@@ -32,6 +32,15 @@ const Home = () => {
     { name: "Javascript", value: 90, color: "red.500" },
     { name: "MongoDB", value: 85, color: "blue.400" },
   ];
+
+  const certificates = [
+    { name: "AZ-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
+    { name: "AZ-204", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
+    { name: "AZ-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
+    { name: "DP-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
+    { name: "PL-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
+    { name: "PL-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" }
+  ]
   const cv = "https://res.cloudinary.com/djcni3ioh/image/upload/v1738241564/Assets/DeveloperResume_vwo6tr.pdf";
   const fileName = 'myCV.pdf';
   const filePath = cv + fileName;
@@ -378,14 +387,70 @@ const Home = () => {
       </Container>
 
       {/* skill sections */}
-      <Container maxW={"100%"} h={["", "90vh"]} bg={""}>
-        <VStack spacing={6} p={6} maxW="600px" mx="auto">
+      <Container maxW={"100%"} minH={["", "50vh"]} bg={""} position={"relative"} py={16}>
+
+        <Text
+          fontSize={["6xl", "8xl"]}
+          fontWeight="extrabold"
+          opacity={0.05}
+          position="absolute"
+          top={["16.5%", "22"]}
+          left="50%"
+          transform="translate(-50%, -50%)"
+          whiteSpace="nowrap"
+          zIndex={0}
+        >
+          SKILLS
+        </Text>
+        <VStack spacing={6} p={6} w={["", "80%"]} mx="auto" position={"relative"} zIndex={1}>
+
           <Text fontSize="2xl" fontWeight="bold" color="teal.500">
             MY SKILLS
           </Text>
-          {skills.map((skill, index) => (
-            <SkillBar key={index} {...skill} />
-          ))}
+          <Box display={"flex"} flexWrap={"wrap"} w={"100%"} gap={4}>
+            {skills.map((skill, index) => (
+              <Box key={index} w={["100%", "100%", "48%"]} mt={1}>
+                <SkillBar key={index} {...skill} />
+              </Box>
+            ))}
+          </Box>
+        </VStack>
+      </Container>
+
+
+
+      {/* Cetifications sections */}
+      <Container maxW={"100%"} minH={["", "50vh"]} bg={""} position={"relative"} py={16}>
+
+        <Text
+          fontSize={["5xl", "8xl"]}
+          fontWeight="extrabold"
+          opacity={0.05}
+          position="absolute"
+          top={["16.5%", "22"]}
+          left="50%"
+          transform="translate(-50%, -50%)"
+          whiteSpace="nowrap"
+          zIndex={0}
+        >
+          CERTIFICATIONS
+        </Text>
+        <VStack spacing={6} p={[0,6]} w={["", "80%"]} mx="auto" position={"relative"} zIndex={1}>
+
+          <Text fontSize="2xl" fontWeight="bold" color="teal.500">
+            MY CERTIFICATES
+          </Text>
+          <Box display={"flex"} flexWrap={"wrap"} w={"100%"} gap={4}>
+            {certificates.map((item, index) => (
+              <Box key={index} w={["100%", "100%", "48%"]} mt={1} display={"flex"} flexDirection={"column"} alignItems={"center"}>
+                <Image
+                  src={item.url} border={"1px solid gray"} rounded={"3xl"} objectFit={"contain"}/>
+                <Text fontSize={"2xl"} fontWeight={"bold"}>
+                  {item.name}
+                </Text>
+              </Box>
+            ))}
+          </Box>
         </VStack>
       </Container>
 
@@ -880,7 +945,7 @@ const SkillBar = ({ name, value, color }: any) => {
           animate={{ width: inView ? `${value}%` : "0%" }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <Box h="8px" bg={color} borderRadius="md" />
+          <Box h="15px" bg={color} borderRadius="md" />
         </motion.div>
       </Box>
     </VStack>
