@@ -1,21 +1,16 @@
-import { AddIcon, MinusIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import {
-  Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel,
   Box, Button, Container, Flex, FormControl, FormLabel, HStack, Heading,
   Image,
-  Input, InputGroup, InputRightElement, Stack,
-  Tag, TagLabel, Text, VStack,
+  Input,
+  Stack,
+  Text, Textarea, VStack,
   useBreakpointValue
 } from '@chakra-ui/react';
 import { motion } from "framer-motion";
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Helmet } from "react-helmet";
-import { BiSupport } from 'react-icons/bi';
-import { FaExternalLinkSquareAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { FaEarthAsia } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoMdDownload } from "react-icons/io";
-import { IoLocationSharp } from "react-icons/io5";
-import { MdOutlineEmail } from 'react-icons/md';
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import Typewriter from "typewriter-effect";
@@ -23,7 +18,7 @@ import Typewriter from "typewriter-effect";
 
 
 const Home = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
   const skills = [
     { name: "React", value: 95, color: "teal.400" },
     { name: "Node Js", value: 90, color: "red.400" },
@@ -34,6 +29,7 @@ const Home = () => {
   ];
 
   const certificates = [
+    { name: "ReactJs", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744889654/portfolio/reactCertificates_oh9ahs.png" },
     { name: "AZ-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
     { name: "AZ-204", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
     { name: "AZ-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
@@ -105,7 +101,7 @@ const Home = () => {
         <title>Home</title>
         <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
       </Helmet>
-      <Container maxW={"100%"} bg={"#31307a"} h={"81vh"} display={"flex"} flexDirection={["column", "row"]}>
+      <Container maxW={"100%"} bg={"#F7F9FC"} h={"81vh"} display={"flex"} flexDirection={["column", "row"]}>
         <Box position={"relative"} width={["100%", "50%"]} height={["50%", "45%"]}
           display={"flex"}
           flexDirection={"column"}
@@ -115,7 +111,7 @@ const Home = () => {
           left={["0%", "10%"]}
         >
 
-          <Heading as='h1' size={["2xl", "4xl"]} display={"flex"} color={"whiteAlpha.900"} >
+          <Heading as='h1' size={["2xl", "4xl"]} display={"flex"} color={"#1F2937"} >
             <motion.h1 {...animations.h1}>
               Hi, I Am <br /> Lakshman Gupta
             </motion.h1>
@@ -126,7 +122,7 @@ const Home = () => {
             </Heading> */}
 
           {/* <Text color={"white"} fontSize={["2xl","3xl"]} children="Full Stack Developer | Frontend Developer"/> */}
-          <Text color={"#ea972f"} fontSize={["2xl", "3xl"]}>
+          <Text color={"#6B7280"} fontSize={["2xl", "3xl"]}>
             <Typewriter
               options={{
                 strings: ["Frontend Developer", "A Designer", "Full Stack Developer"],
@@ -137,173 +133,18 @@ const Home = () => {
             />
           </Text>
           <Box display={"flex"} width={["80%", "30%"]} justifyContent={"space-between"}>
-            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid crimson"} borderRadius={"lg"}><FaFacebookF style={{ fontSize: "2.5rem", color: "#4278ff" }} /></Box></Link>
-            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #206da8"} borderRadius={"lg"}><FaLinkedinIn style={{ fontSize: "2.5rem", color: "blue" }} /></Box></Link>
-            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid pink"} borderRadius={"lg"}><FaInstagram style={{ fontSize: "2.5rem", color: "crimson" }} /></Box></Link>
+            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaFacebookF style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
+            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaLinkedinIn style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
+            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaInstagram style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
           </Box>
 
-          <Button colorScheme="purple" color={"azure"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload /> </Button>
+          <Button bg={"#6366F1"} _hover={{ bg: "#4F46E5" }} color={"#FFFFFF"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload /> </Button>
         </Box>
         <Box display={["none", "flex"]} sx={{ borderRadius: "100px" }} alignItems={"center"}>
           <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1743766956/imgblack-removebg-preview_zlxin2.png"}
             style={{
-              border: "2px solid gray", borderRadius: "400px", objectFit: "contain", height: "", width: "100%", textAlign: "center"
+              border: "2px solid #E5E7EB", borderRadius: "400px", objectFit: "contain", height: "", width: "100%", textAlign: "center"
             }} />
-        </Box>
-      </Container>
-
-
-
-
-      <Container maxW={"100%"} bg={""} h={["", "60vh"]}>
-
-        <Box w={["", "50%"]} m={"auto"} h={"100%"}>
-
-          <Box maxW={["100%", "70%"]} margin={"auto"} h={["12.5rem", "30%"]} display={"flex"} justifyContent={"center"} alignItems={"center"}>
-            <Heading size={["2xl", "3xl"]} textAlign={"center"} alignItems={"center"} children="Professional Experience" />
-          </Box>
-
-
-          <Accordion defaultIndex={[0]} allowToggle>
-            <AccordionItem mt={3}>
-              <h2 >
-                <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
-                  <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-                    <Text fontWeight={"medium"} fontSize={"lg"}>Software Engineer @ Defacto Infotech pvt ltd</Text>
-                    <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2022 - Present</Text>
-                  </Box>
-                  <AccordionIcon color={"whiteAlpha.900"} />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
-                <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
-                  <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
-                  <Link to={"https://lakshmanportfolio2023.netlify.app/"} target='_blank'><Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text></Link>
-                </Box>
-                <Text mt={2} color={"whiteAlpha.900"}>
-                  Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Micorsoft Dynamic 365.
-                </Text>
-                <HStack spacing={4} mt={2}>
-                  <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                    <TagLabel>Vue Js</TagLabel>
-                  </Tag>
-                  <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                    <TagLabel>React</TagLabel>
-                  </Tag>
-                  <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                    <TagLabel>Javascript</TagLabel>
-                  </Tag>
-                  <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                    <TagLabel>Redux</TagLabel>
-                  </Tag>
-                  <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                    <TagLabel>React Native</TagLabel>
-                  </Tag>
-                </HStack>
-              </AccordionPanel>
-            </AccordionItem>
-
-            <AccordionItem mt={3}>
-              {({ isExpanded }) => (
-                <>
-                  <h2>
-                    <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
-                      <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-                        <Text fontWeight={"medium"} fontSize={"lg"}>Web Developer @ Freelancer</Text>
-                        <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2021-2022</Text>
-
-
-
-                      </Box>
-                      {isExpanded ? (
-                        <MinusIcon fontSize='12px' color={"whiteAlpha.900"} />
-                      ) : (
-                        <AddIcon fontSize='12px' color={"whiteAlpha.900"} />
-                      )}
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
-                    <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
-                      <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
-                      <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
-                    </Box>
-                    <Text mt={2} color={"whiteAlpha.900"}>
-                      Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.
-                    </Text>
-                    <HStack spacing={4} mt={2}>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Vue Js</TagLabel>
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>React</TagLabel>
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Javascript</TagLabel>
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Redux</TagLabel>
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>React Native</TagLabel>
-                      </Tag>
-                    </HStack>
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-
-            <AccordionItem mt={3}>
-              {({ isExpanded }) => (
-                <>
-                  <h2>
-                    <AccordionButton bgColor={"#7D08A7"} borderRadius={"xl"} p={3}>
-                      <Box as="span" flex='1' textAlign='left' display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-                        <Text fontWeight={"medium"} fontSize={"lg"}>Top Rated Web Developer @ Upwork Inc.</Text>
-                        <Text fontWeight={"medium"} fontSize={"lg"} mr={5}>2017 - Present</Text>
-
-
-                      </Box>
-                      {isExpanded ? (
-                        <MinusIcon fontSize='12px' color={"whiteAlpha.900"} />
-                      ) : (
-                        <AddIcon fontSize='12px' color={"whiteAlpha.900"} />
-                      )}
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4} bgColor={"#1F1342"} color={"whiteAlpha.700"} borderRadius={"xl"} py={5} mt={2} px={3}>
-                    <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"}>
-                      <Text display={"flex"} alignItems={"center"}> <IoLocationSharp /> Mohali, Punjab</Text>
-                      <Text display={"flex"} alignItems={"center"}> <FaExternalLinkSquareAlt /> https://lakshmanportfolio2023.netlify.app/</Text>
-                    </Box>
-                    <Text mt={2} color={"whiteAlpha.900"}>
-                      Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.
-                    </Text>
-                    <HStack spacing={4} mt={2}>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Vue Js</TagLabel>
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>React</TagLabel>
-
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Javascript</TagLabel>
-
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>Redux</TagLabel>
-
-                      </Tag>
-                      <Tag size={'lg'} borderRadius='full' variant='solid' colorScheme='green'>
-                        <TagLabel>React Native</TagLabel>
-                      </Tag>
-                    </HStack>
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-          </Accordion>
-
         </Box>
       </Container>
 
@@ -377,8 +218,8 @@ const Home = () => {
 
               {/* Buttons */}
               <HStack mt={5}>
-                <Button colorScheme="teal" variant="outline">Hire Me</Button>
-                <Button colorScheme="teal">Learn More</Button>
+                <Button color={"#6366F1"} variant="outline" _hover={{color:"#4F46E5"}}>Hire Me</Button>
+                <Button color={"#FFFFFF"} bg={"#6366F1"} _hover={{bg:"#4F46E5"}}>Learn More</Button>
               </HStack>
             </VStack>
           </Flex>
@@ -435,7 +276,7 @@ const Home = () => {
         >
           CERTIFICATIONS
         </Text>
-        <VStack spacing={6} p={[0,6]} w={["", "80%"]} mx="auto" position={"relative"} zIndex={1}>
+        <VStack spacing={6} p={[0, 6]} w={["", "80%"]} mx="auto" position={"relative"} zIndex={1}>
 
           <Text fontSize="2xl" fontWeight="bold" color="teal.500">
             MY CERTIFICATES
@@ -444,7 +285,7 @@ const Home = () => {
             {certificates.map((item, index) => (
               <Box key={index} w={["100%", "100%", "48%"]} mt={1} display={"flex"} flexDirection={"column"} alignItems={"center"}>
                 <Image
-                  src={item.url} border={"1px solid gray"} rounded={"3xl"} objectFit={"contain"}/>
+                  src={item.url} border={"1px solid gray"} rounded={"3xl"} objectFit={"contain"} />
                 <Text fontSize={"2xl"} fontWeight={"bold"}>
                   {item.name}
                 </Text>
@@ -460,92 +301,14 @@ const Home = () => {
       {/* portfolio section */}
 
 
-      <Container maxW={"100%"} h={"160vh"} bg={"#0f0836"}>
-
-        <Container display={"flex"} maxW={["100%", "70%"]} h={"100%"} flexDirection={["column", "row"]} flexWrap={["nowrap", "wrap"]}>
-          <Box width={["100%", "50%"]}>
-            <Heading fontSize={["3rem", "6rem"]} color={"whiteAlpha.900"} h={"20%"}>
-              Portfolio
-            </Heading>
-            <Box>
-              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-1.bcaec8cb_zti23i.jpg"} alt="" />
-              {/* <Box  border={"1px solid crimson"} position={"relative"} w={"20vw"} p={"1rem"}
-        left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
-            <Heading size={"2xl"}>
-                Minimalism
-            </Heading>
-            <Text fontSize={"2xl"} m={2}>
-                illustration .Art Direction
-            </Text>
-            <Button variant={"outline"} fontSize={"2xl"} color={"whiteAlpha.800"} m={2}>
-                View Work
-            </Button>
-        </Box> */}
-
-            </Box>
-            <Box>
-              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-2.c17aa951_u5wmrc.jpg"} alt="" />
-              {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
-        left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
-            <Heading size={"2xl"}>
-                3D Project
-            </Heading>
-            <Text fontSize={"2xl"} m={2}>
-                illustration .Art Direction
-            </Text>
-            <Button variant={"outline"} fontSize={"2xl"} color={"whiteAlpha.800"} m={2}>
-                View Work
-            </Button>
-        </Box> */}
-            </Box>
-          </Box>
-
-
-          <Box width={["100%", "50%"]}>
-            <Box>
-              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007264/portfolio/img-3.4918c2e8_vimmvw.jpg"} alt="" />
-              {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
-        left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
-            <Heading size={"2xl"}>
-               Abstract Art
-            </Heading>
-            <Text fontSize={"2xl"} m={2}>
-                illustration .Art Direction
-            </Text>
-            <Button variant={"outline"} fontSize={"2xl"} color={"whiteAlpha.800"} m={2}>
-                View Work
-            </Button>
-        </Box> */}
-            </Box>
-            <Box>
-              <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1744007265/portfolio/img-4.9ca17d0e_kxwfn2.jpg"} alt="" />
-              {/* <Box  border={"1px solid crimson"} position={"relative"} h={"20vh"} w={"20vw"} p={"2rem"}
-        left={"0"} bottom={"22vh"} color={"whiteAlpha.800"} zIndex={1000}>
-            <Heading size={"2xl"}>
-                Modern BG
-            </Heading>
-            <Text fontSize={"2xl"} m={2}>
-                illustration .Art Direction
-            </Text>
-            <Button variant={"outline"} fontSize={"2xl"} color={"whiteAlpha.800"} m={2}>
-                View Work
-            </Button>
-        </Box> */}
-            </Box>
-          </Box>
-
-        </Container>
-
-      </Container>
 
 
 
-
-      <Container maxW={"100%"} h={["", "90vh"]} bg={"#0f0836"}>
+      <Container maxW={"100%"} h={["", "90vh"]} bg={"#F7F9FC"}>
 
         <Container maxW={["100%", "70%"]} h={"100%"}>
           <Box display={"flex"} alignItems={"center"} justifyContent={"center"} h={"20vh"}>
-            <Heading fontSize={["3xl", "7xl"]} color={"whiteAlpha.900"}>
+            <Heading fontSize={["3xl", "7xl"]} color={"#1F2937"}>
               Let’s Talk
             </Heading>
           </Box>
@@ -553,113 +316,80 @@ const Home = () => {
           <Container maxW={"100%"} display={"flex"} flexDirection={["column", "row"]}>
 
             <Flex
-              w={["100%", "50%"]} border={"1px solid gray"}>
-              <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-                <Stack align={'center'}>
-                  <Heading fontSize={'4xl'} textAlign={'center'} color={"whiteAlpha.800"}>
-                    Get in Touch
-                  </Heading>
-                </Stack>
-                <Box
-                  rounded={'lg'}
-                  //   bg={useColorModeValue('white', 'gray.700')}
-                  bg={"#0f0836"}
-                  boxShadow={'lg'}>
-                  <Stack spacing={4}>
-                    <Stack direction={["column", "row"]}>
-                      <Box>
-                        <FormControl id="firstName" isRequired>
-                          <FormLabel color={"whiteAlpha.900"}>First Name</FormLabel>
-                          <Input type="text" color={"whiteAlpha.900"} />
-                        </FormControl>
-                      </Box>
-                      <Box>
-                        <FormControl id="lastName">
-                          <FormLabel color={"whiteAlpha.900"}>Last Name</FormLabel>
-                          <Input type="text" color={"whiteAlpha.900"} />
-                        </FormControl>
-                      </Box>
-                    </Stack>
-                    <FormControl id="email" isRequired>
-                      <FormLabel color={"whiteAlpha.900"}>Email address</FormLabel>
-                      <Input type="email" color={"whiteAlpha.900"} />
-                    </FormControl>
-                    <FormControl id="subject" isRequired>
-                      <FormLabel color={"whiteAlpha.900"}>Subject</FormLabel>
-                      <InputGroup>
-                        <Input type={showPassword ? 'text' : 'password'} color={"whiteAlpha.900"} />
-                        <InputRightElement h={'full'}>
-                          <Button color={"whiteAlpha.800"}
-                            variant={'ghost'}
-                            onClick={() => setShowPassword((showPassword) => !showPassword)}>
-                            {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                          </Button>
-                        </InputRightElement>
-                      </InputGroup>
-                    </FormControl>
+              direction={{ base: "column-reverse", md: "row" }}
+              maxW="6xl"
+              mx="auto"
+              gap={8}>
+              <Box
+                flex={1}
+                borderRadius="lg"
+                p={[0,6]}
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center">
+                <Image
+                  src="https://res.cloudinary.com/djcni3ioh/image/upload/v1744889654/portfolio/fae1fdb810ce1939fd9af8f4f0cd07c495648ae2-1920x1440_skceif.webp"
+                  alt="Setup"
+                  borderRadius="md"
+                  objectFit="cover"
+                  mb={4}
+                />
+                <VStack spacing={2} align="start" w="100%">
+                  <Text fontWeight="bold" color="purple.400">
+                    Test
+                  </Text>
+                  <Text>
+                    <b>Email:</b> guptalakshman96.lg@gmail.com
+                  </Text>
+                  <Text>
+                    <b>Address:</b> Uttar Pradesh, India
+                  </Text>
+                  <Text>
+                    <b>Working Hours:</b> 9:00 AM - 1:00 AM
+                  </Text>
+                  {/* Social icons (optional) */}
+                </VStack>
+              </Box>
 
-                    <FormControl id='message' isRequired>
-                      <FormLabel color={"whiteAlpha.900"}>Message</FormLabel>
-                      <Input type="text" color={"whiteAlpha.900"} />
-                    </FormControl>
-                    <Stack spacing={10} pt={2}>
-                      <Button
-                        loadingText="Submitting"
-                        size="lg"
-                        bg={'blue.400'}
-                        color={'white'}
-                        _hover={{
-                          bg: 'blue.500',
-                        }}>
-                        Send Message
-                      </Button>
-                    </Stack>
-                  </Stack>
-                </Box>
-              </Stack>
+              {/* RIGHT FORM SECTION */}
+              <Box flex={1}>
+                <Text textAlign="center" mb={4}>
+                  Leave your email and I will get back to you within 24 hours
+                </Text>
+                <VStack spacing={4}>
+                  <FormControl>
+                    <FormLabel>Name</FormLabel>
+                    <Input placeholder="Lakshman Gupta" />
+                  </FormControl>
+                  <FormControl>
+                    <FormLabel>Email</FormLabel>
+                    <Input
+                      type="email"
+                      placeholder="guptalakshman96.lg@gmail.com"
+                    />
+                  </FormControl>
+                  <FormControl>
+                    <FormLabel>Subject</FormLabel>
+                    <Input placeholder="Want to build a website" />
+                  </FormControl>
+                  <FormControl>
+                    <FormLabel>Message</FormLabel>
+                    <Textarea
+                      placeholder="Looking for a expert software developer skilled in React and Next.js for a specific project"
+                    />
+                  </FormControl>
+                  <Button bg={"#6366F1"} _hover={{bg:"#4F46E5"}} width="100%" color={"#FFFFFF"}>
+                    Submit ➤
+                  </Button>
+                </VStack>
+              </Box>
             </Flex>
 
 
 
 
-            <Box w={["100%", "50%"]} h={["50vh", ""]} display={"flex"} flexDirection={"column"} justifyContent={"space-between"} ml={["", 2]} mt={[3, 0]}>
-              <Box border={"1px solid gray"} w={["100%", "70%"]} h={"30%"} color={"white"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
-                <Heading fontSize={["2xl", ""]}>
-                  25, North Street Dubai
-                </Heading>
-                <Box display={"flex"} justifyContent={"space-around"} w={"100%"}>
-                  <FaEarthAsia style={{ fontSize: "3rem" }} />
-                  <Text>
-                    Office Address
-                  </Text>
-                </Box>
-              </Box>
-              <Box border={"1px solid gray"} w={["100%", "70%"]} h={"30%"} color={"white"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
-                <Heading fontSize={["2xl", ""]}>
-                  info@edefytheme.com
-                </Heading>
-                <Box display={"flex"} justifyContent={"space-around"} w={"100%"}>
-                  <MdOutlineEmail style={{ fontSize: "3rem" }} />
-                  <Text>
-                    Official Mail
-                  </Text>
-                </Box>
-              </Box>
-              <Box border={"1px solid gray"} w={["100%", "70%"]} h={"30%"} color={"white"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
-                <Heading fontSize={["2xl", ""]}>
-                  +91 256-987-239
-                </Heading>
-                <Box display={"flex"} justifyContent={"space-around"} w={"100%"}>
-                  <BiSupport style={{ fontSize: "3rem" }} />
-                  <Text>
-                    Official Phone
-                  </Text>
-                </Box>
-              </Box>
 
-
-
-            </Box>
           </Container>
         </Container>
       </Container>
@@ -667,7 +397,7 @@ const Home = () => {
 
 
 
-      <Container maxW={"100%"} h={["", "80vh"]} bg={"#0f0836"}>
+      {/* <Container maxW={"100%"} h={["", "80vh"]} bg={"#0f0836"}>
         <Container maxW={["100%", "70%"]} h={["15vh", "30%"]} display={"flex"} alignItems={"center"} justifyContent={"center"}>
           <Heading color={"whiteAlpha.900"} fontSize={["2.5rem", "6rem"]}>
             Latest News
@@ -716,7 +446,7 @@ const Home = () => {
         </Container>
 
 
-      </Container>
+      </Container> */}
 
 
 

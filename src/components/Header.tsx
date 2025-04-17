@@ -8,7 +8,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const LinkButton=({url='/', title="Home"})=>{
     return(
-    <Link to={url} ><Button bg={"#0f0836"} color={"whiteAlpha.900"}>{title}</Button></Link> 
+    <Link to={url} ><Button variant={'link'} _hover={{color:"#6366F1s"}} color={"#1F2937"}>{title}</Button></Link> 
     )
   }
 
@@ -27,24 +27,24 @@ const Header = () => {
 
     <>{
         viewWidth>500?
-   <Container maxW={"100%"} display={'flex'} alignItems={"center"} justifyContent={"space-around"} bg={"black"} height={"7vh"} position={"sticky"} top={0} zIndex={1000}>
+   <Container maxW={"100%"} display={'flex'} alignItems={"center"} justifyContent={"space-around"} bg={"#FFFFFF"} height={"7vh"} position={"sticky"} top={0} zIndex={1000}>
     <Box w={"25%"}  display={"flex"} alignItems={"center"} justifyContent={"center"}>
-        <Heading color={"whiteAlpha.800"}>Lakshman.</Heading>
+        <Heading color={"#1F2937"}>Lakshman.</Heading>
     </Box>
 
     <Box w={"50%"} fontWeight={"bold"} color={"whiteAlpha.800"} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
-        <Link to={'/'}><Text color={"crimson"} children={"Home"} p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid white",borderRadius:"50px"}}/></Link>
-        <Link to={'/about'}><Text children={"About"} p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
-        <Link to={'/cart'}><Text children={"E-commerce"}  p={2} _hover={{color:"crimson", transition:"all 0.3s" , borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
-        <Link to={'/project'}><Text children={"Projects"}  p={2} _hover={{color:"crimson", transition:"all 0.3s" , borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
-        <Link to={'/blog'}><Text children={"Blog"}  p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
-        <Link to={'/contact'}><Text children={"Contact"}  p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}/></Link>
-        <Link to={'/pricing'}><Text  p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}> Pricing</Text></Link>
-        <Link to={'/cartitem'}><Text  p={2} _hover={{color:"crimson", transition:"all 0.3s", borderBottom:"2px solid red",borderRadius:"50px"}}> <FaShoppingCart/></Text></Link>
+        <Link to={'/'}><Text color={"#1F2937"} children={"Home"} p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/about'}><Text color={"#1F2937"} children={"About"} p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/cart'}><Text color={"#1F2937"} children={"E-commerce"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s" , borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/project'}><Text color={"#1F2937"} children={"Projects"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s" , borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/blog'}><Text color={"#1F2937"} children={"Blog"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/contact'}><Text color={"#1F2937"} children={"Contact"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}/></Link>
+        <Link to={'/pricing'}><Text color={"#1F2937"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}> Pricing</Text></Link>
+        <Link to={'/cartitem'}><Text color={"#1F2937"}  p={2} _hover={{color:"#6366F1", transition:"all 0.3s", borderBottom:"2px solid #6366F1",borderRadius:"50px"}}> <FaShoppingCart/></Text></Link>
     </Box>
     <Box w={"25%"} display={"flex"} alignItems={"center"} justifyContent={"center"}>
     <Link to={"/contact"}>
-        <Button bg={"#162857"} variant={"outline"} color={"whiteAlpha.800"} border={"1px solid crimson"} _hover={{color:"black", bgColor:"red",border:"none", transition:"all 0.3s"}}>
+        <Button bg={"#6366F1"} variant={"outline"} color={"#FFFFFF"} border={"1px solid #6366F1"} _hover={{color:"#FFFFFF", bgColor:"#4F46E5",border:"none", transition:"all 0.3s"}}>
             Let's Talk
         </Button>
             </Link>
@@ -68,8 +68,8 @@ const Header = () => {
     
     <Drawer placement='left' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay backdropFilter={'blur(2px)'}/>
-        <DrawerContent bg={"#0f0836"}>
-            <DrawerHeader borderBottomWidth={'1px'} color={"whiteAlpha.900"}>Lakshman.</DrawerHeader>
+        <DrawerContent bg={"#FFFFFF"}>
+            <DrawerHeader borderBottomWidth={'1px'} color={"#1F2937"}>Lakshman.</DrawerHeader>
             <DrawerBody>
                 <VStack alignItems={'flex-start'} spacing='4' onClick={onClose}>
                     <LinkButton url='/' title='Home'/>
