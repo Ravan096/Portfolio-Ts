@@ -2,11 +2,20 @@ import {
   Box, Button, Container, Flex, FormControl, FormLabel, HStack, Heading,
   Image,
   Input,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Stack,
   Text, Textarea, VStack,
-  useBreakpointValue
+  useBreakpointValue,
+  useDisclosure
 } from '@chakra-ui/react';
 import { motion } from "framer-motion";
+import { useState } from 'react';
 // import { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
@@ -19,6 +28,14 @@ import Typewriter from "typewriter-effect";
 
 const Home = () => {
   // const [showPassword, setShowPassword] = useState(false);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [modalData, setModalData] = useState({ title: '', url: '', originalUrl: "" });
+
+  const handleOpenModal = (title: string, url: string, originalUrl: string) => {
+    setModalData({ title, url, originalUrl });
+    onOpen();
+  };
   const skills = [
     { name: "React", value: 95, color: "teal.400" },
     { name: "Node Js", value: 90, color: "red.400" },
@@ -29,13 +46,13 @@ const Home = () => {
   ];
 
   const certificates = [
-    { name: "ReactJs", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744889654/portfolio/reactCertificates_oh9ahs.png" },
-    { name: "AZ-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
-    { name: "AZ-204", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
-    { name: "AZ-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
-    { name: "DP-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
-    { name: "PL-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" },
-    { name: "PL-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png" }
+    { name: "ReactJs", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744889654/portfolio/reactCertificates_oh9ahs.png", originalUrl: "https://www.hackerrank.com/certificates/671480728318" },
+    { name: "AZ-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/A59C989C9FA51B7C?sharingId=B935BC3866E63253" },
+    { name: "AZ-204", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/97266287F5615B5C?sharingId=B935BC3866E63253" },
+    { name: "AZ-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/B55AD3A767A49B7F?sharingId=B935BC3866E63253" },
+    { name: "DP-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/B55AD3A767A49B7F?sharingId=B935BC3866E63253" },
+    { name: "PL-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/A3D4F12862D105DD?sharingId=B935BC3866E63253" },
+    { name: "PL-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/66181823C03BBF0?sharingId=B935BC3866E63253" }
   ]
   const cv = "https://res.cloudinary.com/djcni3ioh/image/upload/v1738241564/Assets/DeveloperResume_vwo6tr.pdf";
   const fileName = 'myCV.pdf';
@@ -218,8 +235,8 @@ const Home = () => {
 
               {/* Buttons */}
               <HStack mt={5}>
-                <Button color={"#6366F1"} variant="outline" _hover={{color:"#4F46E5"}}>Hire Me</Button>
-                <Button color={"#FFFFFF"} bg={"#6366F1"} _hover={{bg:"#4F46E5"}}>Learn More</Button>
+                <Button color={"#6366F1"} variant="outline" _hover={{ color: "#4F46E5" }}>Hire Me</Button>
+                <Button color={"#FFFFFF"} bg={"#6366F1"} _hover={{ bg: "#4F46E5" }}>Learn More</Button>
               </HStack>
             </VStack>
           </Flex>
@@ -283,7 +300,7 @@ const Home = () => {
           </Text>
           <Box display={"flex"} flexWrap={"wrap"} w={"100%"} gap={4}>
             {certificates.map((item, index) => (
-              <Box key={index} w={["100%", "100%", "48%"]} mt={1} display={"flex"} flexDirection={"column"} alignItems={"center"}>
+              <Box key={index} w={["100%", "100%", "48%"]} mt={1} display={"flex"} flexDirection={"column"} alignItems={"center"} onClick={() => handleOpenModal(item.name, item.url, item.originalUrl)}>
                 <Image
                   src={item.url} border={"1px solid gray"} rounded={"3xl"} objectFit={"contain"} />
                 <Text fontSize={"2xl"} fontWeight={"bold"}>
@@ -294,6 +311,40 @@ const Home = () => {
           </Box>
         </VStack>
       </Container>
+
+
+
+
+
+      <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
+        <ModalOverlay />
+        <ModalContent
+          // border="2px solid red"
+          w={["90%", "full"]}
+          maxW={["90%", "800px"]}
+          h={["60vh", "full"]}
+          maxH="90vh"
+        >
+          <ModalHeader textAlign="center">{modalData.title}</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody p={2}>
+            <Image
+              src={modalData.url}
+              alt={modalData.title}
+              w="100%"
+              h="100%"
+              objectFit="contain"
+              maxH="70vh"
+            />
+          </ModalBody>
+          <ModalFooter alignSelf={"center"}>
+            <Button variant={'link'} onClick={() => window.open(modalData.originalUrl, '_blank')}>
+              View Original
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
 
 
 
@@ -323,7 +374,7 @@ const Home = () => {
               <Box
                 flex={1}
                 borderRadius="lg"
-                p={[0,6]}
+                p={[0, 6]}
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
@@ -379,7 +430,7 @@ const Home = () => {
                       placeholder="Looking for a expert software developer skilled in React and Next.js for a specific project"
                     />
                   </FormControl>
-                  <Button bg={"#6366F1"} _hover={{bg:"#4F46E5"}} width="100%" color={"#FFFFFF"}>
+                  <Button bg={"#6366F1"} _hover={{ bg: "#4F46E5" }} width="100%" color={"#FFFFFF"}>
                     Submit ➤
                   </Button>
                 </VStack>
