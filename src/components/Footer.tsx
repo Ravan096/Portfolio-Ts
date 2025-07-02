@@ -33,7 +33,7 @@ const Footer = () => {
 
         </Container>
 
-        <Text color={"whiteAlpha.900"} textAlign={"center"}>
+        <Text color={"#6B7280"} textAlign={"center"}>
         © 2023 Lakshman. all rights reserved
         </Text>
 
