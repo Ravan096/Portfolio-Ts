@@ -62,13 +62,13 @@ const Cart = () => {
 
   return (
 
-    <Container maxW={"full"} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#252526"}>
+    <Container maxW={"full"} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#F7F9FC"}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Products</title>
         <link rel="canonical" href="https://lakshmanportfolio2023.netlify.app/" />
       </Helmet>
-      <Container maxW={["full", "80%"]} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#252526"}>
+      <Container maxW={["full", "80%"]} display={"flex"} justifyContent={"space-around"} flexWrap={"wrap"} bgColor={"#F7F9FC"}>
         {
           loading ? (
             <Loader />
@@ -122,10 +122,10 @@ const ProductCard = ({ image, price, name, desc, id, carthandler }: any) => {
     <Box
       transition={"all 0.3s"}
       _hover={{ transform: "scale(1.05)" }}
-      border={"1px solid black"}
+      border={"1px solid #E5E7EB"}
       maxW={'300px'}
       w={'full'}
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue('#FFFFFF', '#FFFFFF')}
       boxShadow={'2xl'}
       rounded={'md'}
       p={6}
@@ -137,7 +137,7 @@ const ProductCard = ({ image, price, name, desc, id, carthandler }: any) => {
         </Box>
         <Stack cursor={"pointer"}>
           <Text
-            color={'black.500'}
+            color={'#6B7280'}
             textTransform={'uppercase'}
             fontWeight={800}
             fontSize={'sm'}
@@ -146,12 +146,12 @@ const ProductCard = ({ image, price, name, desc, id, carthandler }: any) => {
             {price}
           </Text>
           <Heading
-            color={useColorModeValue('gray.700', 'white')}
+            color={useColorModeValue('#1F2937', '#1F2937')}
             fontSize={'2xl'}
             fontFamily={'body'} noOfLines={1}>
             {name}
           </Heading>
-          <Text color={'gray.500'} noOfLines={3}>
+          <Text color={'#6B7280'} noOfLines={3}>
             {desc}
           </Text>
         </Stack>
@@ -164,12 +164,13 @@ const ProductCard = ({ image, price, name, desc, id, carthandler }: any) => {
           //  mt={8}
           size={'lg'}
           py={'7'}
-          bg={useColorModeValue('gray.900', 'gray.50')}
-          color={useColorModeValue('white', 'gray.900')}
+          bg={useColorModeValue('#6366F1', '#6366F1')}
+          color={useColorModeValue('#FFFFFF', '#FFFFFF')}
           textTransform={'uppercase'}
           _hover={{
             transform: 'translateY(2px)',
             boxShadow: 'lg',
+            bg:"#4F46E5"
           }}
           //  onClick={carthandler} 
           onClick={() => carthandler({ name, price, id, qty: 1, image })}>Add to Cart</Button>

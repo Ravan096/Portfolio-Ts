@@ -388,7 +388,7 @@ const Home = () => {
                 />
                 <VStack spacing={2} align="start" w="100%">
                   <Text fontWeight="bold" color="purple.400">
-                    Test
+                    Lakshman
                   </Text>
                   <Text>
                     <b>Email:</b> guptalakshman96.lg@gmail.com
