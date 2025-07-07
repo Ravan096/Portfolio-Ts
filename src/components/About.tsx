@@ -57,7 +57,7 @@ const About = () => {
                         </Heading>
                     </Box>
 
-                    <Box margin={"auto"} h={"60%"} w={["100%","70%"]} display={"flex"} flexDirection={["row", "row"]} alignItems={"center"} justifyContent={"space-around"} mt={[3, ""]} mb={[3,""]} flexWrap={"wrap"}>
+                    <Box margin={"auto"} h={"60%"} w={["100%","70%"]} display={"flex"} flexDirection={["row", "row"]} alignItems={"center"} justifyContent={"space-around"} mt={[3, ""]} pb={[3,""]} flexWrap={"wrap"}>
 
                         {
                             skills.map((item, idx) => (
