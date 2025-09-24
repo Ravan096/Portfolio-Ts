@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 import { useState } from 'react';
 // import { useState } from 'react';
 import { Helmet } from "react-helmet";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoMdDownload } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
@@ -54,18 +54,20 @@ const Home = () => {
     { name: "PL-400", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/A3D4F12862D105DD?sharingId=B935BC3866E63253" },
     { name: "PL-900", url: "https://res.cloudinary.com/djcni3ioh/image/upload/v1744719789/portfolio/AZ-400_pispql.png", originalUrl: "https://learn.microsoft.com/api/credentials/share/en-us/LakshmanGupta-5212/66181823C03BBF0?sharingId=B935BC3866E63253" }
   ]
-  const cv = "https://res.cloudinary.com/djcni3ioh/image/upload/v1738241564/Assets/DeveloperResume_vwo6tr.pdf";
-  const fileName = 'myCV.pdf';
-  const filePath = cv + fileName;
 
-  const downloadFile = () => {
-    console.log(cv);
-    const a = document.createElement('a');
-    a.href = filePath;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+  const downloadFile = async () => {
+    const response = await fetch("/LakshmanGuptaResume.pdf");
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "LakshmanGuptaResume.pdf";
+    document.body.appendChild(link);
+    link.click();
+
+    link.remove();
+    window.URL.revokeObjectURL(url);
   };
 
 
@@ -150,8 +152,8 @@ const Home = () => {
             />
           </Text>
           <Box display={"flex"} width={["80%", "30%"]} justifyContent={"space-between"}>
-            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaFacebookF style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
-            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaLinkedinIn style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
+            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"} onClick={() => window.open("https://github.com/Ravan096", "_blank")}><FaGithub style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
+            <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"} onClick={() => window.open("https://www.linkedin.com/in/lakshman-gupta-1a0858b1/", "_blank")}><FaLinkedinIn style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
             <Link to={"#"}><Box p={"3"} m={[0, 2]} border={"1px solid #E5E7EB"} borderRadius={"lg"}><FaInstagram style={{ fontSize: "2.5rem", color: "#1F2937" }} /></Box></Link>
           </Box>
 

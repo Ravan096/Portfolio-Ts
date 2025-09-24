@@ -4,6 +4,7 @@ import Loader from "./components/Loader"
 import Header from "./components/Header"
 import CustomCursor from "./components/Customcursor";
 import {Toaster} from "react-hot-toast";
+import Chatbot from "./chatbot/Chatbot"
 
 const Home= lazy(()=> import("./components/Home"))
 const About= lazy(()=> import("./components/About"))
@@ -60,6 +61,7 @@ function App() {
       </Routes>
       <Footer/>
       </Suspense>
+      <Chatbot/>
     </Router>
     </div>
   )

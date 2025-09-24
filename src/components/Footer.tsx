@@ -1,6 +1,6 @@
 import { Container,Box,Heading,Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import {FaFacebookF,FaInstagram,FaTwitter} from 'react-icons/fa';
+import {FaFacebookF,FaInstagram,FaGithub} from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -22,8 +22,8 @@ const Footer = () => {
         <Box border={"1px solid #E5E7EB"} p={"2vh"} borderRadius={"full"}>
         <FaFacebookF style={{fontSize:"3rem", color:"#1F2937"}}/>
         </Box>
-        <Box border={"1px solid #E5E7EB"} p={"2vh"} borderRadius={"full"}>
-        <FaTwitter style={{fontSize:"3rem" , color:"#1F2937"}}/>
+        <Box border={"1px solid #E5E7EB"} p={"2vh"} borderRadius={"full"} onClick={()=> window.open("https://github.com/Ravan096","_blank")}>
+        <FaGithub style={{fontSize:"3rem" , color:"#1F2937"}}/>
         </Box>
         <Box border={"1px solid #E5E7EB"} p={"2vh"} borderRadius={"full"}>
         <FaInstagram style={{fontSize:"3rem" , color:"#1F2937"}}/>
