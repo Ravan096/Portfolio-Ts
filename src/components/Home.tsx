@@ -201,7 +201,7 @@ const Home = () => {
           >
             {/* Profile Image */}
             <Image
-              src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1743766956/imgblack-removebg-preview_zlxin2.png"}
+              src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1786340232/portfolio/Cleaned_Image_ahm2dn.png"}
               alt="Profile Picture"
               boxSize="250px"
               borderRadius="full"
