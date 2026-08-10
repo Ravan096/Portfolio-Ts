@@ -162,7 +162,7 @@ const Home = () => {
         <Box display={["none", "flex"]} sx={{ borderRadius: "100px" }} alignItems={"center"}>
           <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1786340232/portfolio/Cleaned_Image_ahm2dn.png"}
             style={{
-              border: "2px solid #E5E7EB", borderRadius: "400px", objectFit: "contain", height: "", width: "100%", textAlign: "center"
+              border: "2px solid #E5E7EB", borderRadius: "400px", objectFit: "contain", height: "100%", width: "100%", textAlign: "center"
             }} />
         </Box>
       </Container>
