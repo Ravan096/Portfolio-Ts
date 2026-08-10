@@ -160,7 +160,7 @@ const Home = () => {
           <Button bg={"#6366F1"} _hover={{ bg: "#4F46E5" }} color={"#FFFFFF"} onClick={downloadFile} mt={3}>Download CV <IoMdDownload /> </Button>
         </Box>
         <Box display={["none", "flex"]} sx={{ borderRadius: "100px" }} alignItems={"center"}>
-          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1743766956/imgblack-removebg-preview_zlxin2.png"}
+          <img src={"https://res.cloudinary.com/djcni3ioh/image/upload/v1786340232/portfolio/Cleaned_Image_ahm2dn.png"}
             style={{
               border: "2px solid #E5E7EB", borderRadius: "400px", objectFit: "contain", height: "", width: "100%", textAlign: "center"
             }} />
